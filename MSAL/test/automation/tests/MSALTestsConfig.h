@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (class, readonly) BOOL suportsScopes;
 @property (class, readonly) BOOL supportsRTInHeders;
+@property (class, readonly) BOOL supportsSystemBrowser;
 
 @end
 

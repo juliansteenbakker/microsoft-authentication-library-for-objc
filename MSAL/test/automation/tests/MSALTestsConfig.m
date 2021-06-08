@@ -37,4 +37,9 @@
     return YES;
 }
 
++ (BOOL)supportsSystemBrowser
+{
+    return NO;
+}
+
 @end

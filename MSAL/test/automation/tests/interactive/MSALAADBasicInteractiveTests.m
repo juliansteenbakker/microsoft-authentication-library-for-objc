@@ -612,6 +612,8 @@
 
 - (void)testClaimsChallenge_withNonConvergedApp_withSystemWebview
 {
+    XCTSkipUnless(MSALTestsConfig.supportsSystemBrowser);
+    
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     request.promptBehavior = @"force";
     request.testAccount = self.primaryAccount;
