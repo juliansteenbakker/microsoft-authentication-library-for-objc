@@ -35,7 +35,7 @@
 - (void)runInstanceAwareTestWithNationalCloud
 {
     NSString *environment = self.class.confProvider.wwEnvironment;
-    MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:environment targetTenantId:self.primaryAccount.targetTenantId];
+    MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:environment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     request.promptBehavior = @"force";
     request.testAccount = self.primaryAccount;
     request.requestScopes = [self.class.confProvider scopesForEnvironment:self.nationalCloudEnvironment type:@"ms_graph_userread"];
@@ -70,7 +70,7 @@
 - (void)runInstanceAwareTestWithNationalCloud_withOrganizationsAuthority
 {
     NSString *environment = self.class.confProvider.wwEnvironment;
-    MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:environment targetTenantId:self.primaryAccount.targetTenantId];
+    MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:environment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     request.promptBehavior = @"force";
     request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.nationalCloudEnvironment tenantId:@"organizations"];
     request.requestScopes = [self.class.confProvider scopesForEnvironment:self.nationalCloudEnvironment type:@"ms_graph_static"];
@@ -105,7 +105,7 @@
 - (void)runInstanceAwareTestWithNationalCloud_withOrganizationsAuthority_withLoginHintPresent_andEQP
 {
     NSString *environment = self.class.confProvider.wwEnvironment;
-    MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:environment targetTenantId:self.primaryAccount.targetTenantId];
+    MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:environment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     request.clientId = self.testApplication.appId;
     request.promptBehavior = @"force";
     request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:environment tenantId:@"organizations"];
@@ -128,7 +128,7 @@
 // Therefore disable the it for now as that is not happening.
 - (void)runNonInstanceAwareTestWithNationalCloud_withSystemWebView
 {
-    MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.nationalCloudEnvironment targetTenantId:self.primaryAccount.targetTenantId];
+    MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.nationalCloudEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     request.promptBehavior = @"force";
     request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.nationalCloudEnvironment tenantId:@"organizations"];
     request.requestScopes = [self.class.confProvider scopesForEnvironment:self.nationalCloudEnvironment type:@"aad_graph_static"];

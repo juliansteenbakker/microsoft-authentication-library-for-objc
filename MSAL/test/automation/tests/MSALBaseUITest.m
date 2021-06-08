@@ -101,7 +101,7 @@ static MSIDTestConfigurationProvider *s_confProvider;
         webElement = self.testApp.buttons[@"Cancel"];
     }
     
-    BOOL result = [webElement waitForExistenceWithTimeout:5.0];
+    BOOL result = [webElement waitForExistenceWithTimeout:55.0];
     
     XCTAssertTrue(result);
 }
@@ -483,7 +483,7 @@ static MSIDTestConfigurationProvider *s_confProvider;
 {
     NSPredicate *existsPredicate = [NSPredicate predicateWithFormat:@"exists == 1"];
     [self expectationForPredicate:existsPredicate evaluatedWithObject:object handler:nil];
-    [self waitForExpectationsWithTimeout:60.0f handler:nil];
+    [self waitForExpectationsWithTimeout:600.0f handler:nil];
 }
 
 #pragma mark - Config

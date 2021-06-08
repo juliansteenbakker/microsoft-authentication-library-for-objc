@@ -60,7 +60,7 @@
 
 - (void)testRemoveAADAccount_whenOnlyOneAccountInCache_andConvergedApp
 {
-    MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId];
+    MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     request.promptBehavior = @"force";
     request.testAccount = self.primaryAccount;
     request.loginHint = self.primaryAccount.upn;
@@ -83,7 +83,7 @@
 
 - (void)testRemoveAADAccount_whenMultipleAccountsInCache_andConvergedApp
 {
-    MSIDAutomationTestRequest *firstRequest = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId];
+    MSIDAutomationTestRequest *firstRequest = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     firstRequest.promptBehavior = @"force";
     firstRequest.testAccount = self.primaryAccount;
     firstRequest.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"aad_graph_static"];
@@ -99,7 +99,7 @@
 
     self.primaryAccount = self.testAccounts[1];
 
-    MSIDAutomationTestRequest *secondRequest = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId];
+    MSIDAutomationTestRequest *secondRequest = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     secondRequest.promptBehavior = @"force";
     secondRequest.testAccount = self.primaryAccount;
     secondRequest.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"aad_graph_static"];

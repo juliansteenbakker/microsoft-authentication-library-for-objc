@@ -153,9 +153,65 @@
 		23014D4625672DF9005E12F2 /* MSALAuthenticationSchemePop+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 23014D4425672DF9005E12F2 /* MSALAuthenticationSchemePop+Internal.h */; };
 		23014D5025672E53005E12F2 /* MSALAuthenticationSchemeBearer+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 23014D4F25672E53005E12F2 /* MSALAuthenticationSchemeBearer+Internal.h */; };
 		23014D5125672E53005E12F2 /* MSALAuthenticationSchemeBearer+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 23014D4F25672E53005E12F2 /* MSALAuthenticationSchemeBearer+Internal.h */; };
+		2316A38E266ED53F00A8C2EB /* XCUIElement+CrossPlat.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB738C2112C3F3000EA4C5 /* XCUIElement+CrossPlat.m */; };
+		2316A38F266ED53F00A8C2EB /* MSALBlackforestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C2329F21224C21008092C1 /* MSALBlackforestUITests.m */; };
+		2316A390266ED53F00A8C2EB /* MSALTestsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 231FC358266980D90061F47F /* MSALTestsConfig.m */; };
+		2316A391266ED53F00A8C2EB /* MSALNationalCloudUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = B282255E23EF97C50007DFE4 /* MSALNationalCloudUITest.m */; };
+		2316A392266ED53F00A8C2EB /* MSALADFSBaseUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = B21F9DE92120E89E00B1B40C /* MSALADFSBaseUITest.m */; };
+		2316A393266ED53F00A8C2EB /* MSALBaseiOSUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB73812112C3F1000EA4C5 /* MSALBaseiOSUITest.m */; };
+		2316A394266ED53F00A8C2EB /* MSALCacheRemovalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C232AA2122A6A5008092C1 /* MSALCacheRemovalTests.m */; };
+		2316A395266ED53F00A8C2EB /* MSALChinaCloudUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B282256023EF9BFF0007DFE4 /* MSALChinaCloudUITests.m */; };
+		2316A396266ED53F00A8C2EB /* MSALPingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B21F9DEC2120EB3E00B1B40C /* MSALPingUITests.m */; };
+		2316A397266ED53F00A8C2EB /* XCUIElement+MSALiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB738B2112C3F2000EA4C5 /* XCUIElement+MSALiOSUITests.m */; };
+		2316A398266ED53F00A8C2EB /* MSALADFSv3FederatedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B21F9DE52120E53A00B1B40C /* MSALADFSv3FederatedTests.m */; };
+		2316A399266ED53F00A8C2EB /* MSALBaseAADUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F45729211C0B4800818910 /* MSALBaseAADUITest.m */; };
+		2316A39A266ED53F00A8C2EB /* MSALB2CInteractiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F45744211E41C100818910 /* MSALB2CInteractiveTests.m */; };
+		2316A39B266ED53F00A8C2EB /* MSALShibUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B21F9DEE2120F0E800B1B40C /* MSALShibUITests.m */; };
+		2316A39C266ED53F00A8C2EB /* MSALAADBasicInteractiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB73722112C32C000EA4C5 /* MSALAADBasicInteractiveTests.m */; };
+		2316A39D266ED53F00A8C2EB /* MSALGuestUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B21F9DF02120F5CE00B1B40C /* MSALGuestUserTests.m */; };
+		2316A39E266ED53F00A8C2EB /* MSALMSABasicInteractiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B26D3107211680B2002B493F /* MSALMSABasicInteractiveTests.m */; };
+		2316A39F266ED53F00A8C2EB /* MSALBaseUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB73862112C3F2000EA4C5 /* MSALBaseUITest.m */; };
+		2316A3A0266ED53F00A8C2EB /* NSDictionary+MSALiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB738A2112C3F2000EA4C5 /* NSDictionary+MSALiOSUITests.m */; };
+		2316A3A1266ED53F00A8C2EB /* XCTestCase+TextFieldTap.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB73842112C3F2000EA4C5 /* XCTestCase+TextFieldTap.m */; };
+		2316A3A2266ED53F00A8C2EB /* MSALUSGovUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B282256123EF9BFF0007DFE4 /* MSALUSGovUITests.m */; };
+		2316A3A3266ED53F00A8C2EB /* MSALAADMultiUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F4571D2116B26C00818910 /* MSALAADMultiUserTests.m */; };
+		2316A3A4266ED53F00A8C2EB /* MSALUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB73982112C51E000EA4C5 /* MSALUITests.swift */; };
+		2316A3A5266ED53F00A8C2EB /* MSALADFSv4FederatedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B21F9DE72120E85100B1B40C /* MSALADFSv4FederatedTests.m */; };
+		2316A3A7266ED53F00A8C2EB /* libIdentityAutomationTestLib iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B21FA9BC2204DC5700806B68 /* libIdentityAutomationTestLib iOS.a */; };
+		2316A3A8266ED53F00A8C2EB /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20E245C21FEB3650037CA5E /* AuthenticationServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		2316A3A9266ED53F00A8C2EB /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29E2AC421238E0000B170ED /* SafariServices.framework */; };
+		2316A3AA266ED53F00A8C2EB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96902DEC20E1574F00200E6F /* WebKit.framework */; };
+		2316A3AB266ED53F00A8C2EB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB739B2112C7F9000EA4C5 /* Security.framework */; };
+		2316A3AF266ED53F00A8C2EB /* MSAL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D65A6F431E3FD30A00C69FBA /* MSAL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		231CE9DC1FEC682000E95D3E /* libIdentityTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A206271FC50A4D00755A51 /* libIdentityTest.a */; };
 		231CE9DE1FEC684C00E95D3E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231CE9DD1FEC684C00E95D3E /* Security.framework */; };
 		231CE9DF1FEC7E8400E95D3E /* libIdentityTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A206291FC50A4D00755A51 /* libIdentityTest.a */; };
+		231FC27E2666D9550061F47F /* MSALUser+Automation.m in Sources */ = {isa = PBXBuildFile; fileRef = B25F1BC01EC3DD3200474D1B /* MSALUser+Automation.m */; };
+		231FC2842666D9550061F47F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 962E37C01E720E4F00DE71FE /* main.m */; };
+		231FC2852666D9550061F47F /* MSALResult+Automation.m in Sources */ = {isa = PBXBuildFile; fileRef = B25F1BC31EC3E44500474D1B /* MSALResult+Automation.m */; };
+		231FC2862666D9550061F47F /* MSALAutoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 962E37CA1E720E4F00DE71FE /* MSALAutoAppDelegate.m */; };
+		231FC2872666D9550061F47F /* MSIDTokenCacheItem+Automation.m in Sources */ = {isa = PBXBuildFile; fileRef = B25F1BBA1EC3DB3200474D1B /* MSIDTokenCacheItem+Automation.m */; };
+		231FC28A2666D9550061F47F /* MSALUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BB73982112C51E000EA4C5 /* MSALUITests.swift */; };
+		231FC28C2666D9550061F47F /* MSAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65A6F431E3FD30A00C69FBA /* MSAL.framework */; };
+		231FC28D2666D9550061F47F /* libIdentityAutomationAppLib iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B29520A220B4CB9F0068C021 /* libIdentityAutomationAppLib iOS.a */; };
+		231FC28E2666D9550061F47F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96902DEC20E1574F00200E6F /* WebKit.framework */; };
+		231FC28F2666D9550061F47F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB739B2112C7F9000EA4C5 /* Security.framework */; };
+		231FC2902666D9550061F47F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A206311FC5108000755A51 /* UIKit.framework */; };
+		231FC2922666D9550061F47F /* MainAutomation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21FA9EF22063EC800806B68 /* MainAutomation.storyboard */; };
+		231FC2932666D9550061F47F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962302581E7215170022A778 /* Launch Screen.storyboard */; };
+		231FC2942666D9550061F47F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 962E37D41E720E4F00DE71FE /* Images.xcassets */; };
+		231FC2962666D9550061F47F /* MSAL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D65A6F431E3FD30A00C69FBA /* MSAL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		231FC3442666E6890061F47F /* OneAuth.framework/OneAuth in Frameworks */ = {isa = PBXBuildFile; fileRef = 231FC3132666E5B60061F47F /* OneAuth.framework/OneAuth */; };
+		231FC3452666E6890061F47F /* OneAuth.framework/OneAuth in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 231FC3132666E5B60061F47F /* OneAuth.framework/OneAuth */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		231FC34E2666F1CC0061F47F /* MSALAutomationBaseAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 231831CF2665AFB7002E9C89 /* MSALAutomationBaseAction.m */; };
+		231FC34F2666F1EB0061F47F /* MSALAutomationAcquireTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 231831D32665AFB7002E9C89 /* MSALAutomationAcquireTokenAction.m */; };
+		231FC3502666F1FC0061F47F /* MSALAutomationAcquireTokenSilentAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 231831D22665AFB7002E9C89 /* MSALAutomationAcquireTokenSilentAction.m */; };
+		231FC3512666F1FF0061F47F /* MSALAutomationReadAccountsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 231831D12665AFB7002E9C89 /* MSALAutomationReadAccountsAction.m */; };
+		231FC3522666F2020061F47F /* MSALAutomationRemoveAccountAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 231831D52665AFB7002E9C89 /* MSALAutomationRemoveAccountAction.m */; };
+		231FC3532666F2050061F47F /* MSALAutomationExpireATAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 231831D02665AFB7002E9C89 /* MSALAutomationExpireATAction.m */; };
+		231FC3542666F2070061F47F /* MSALAutomationInvalidateRTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 231831CC2665AFB7002E9C89 /* MSALAutomationInvalidateRTAction.m */; };
+		231FC359266980D90061F47F /* MSALTestsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 231FC358266980D90061F47F /* MSALTestsConfig.m */; };
+		231FC35A26698BCA0061F47F /* MSALTestsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 231FC358266980D90061F47F /* MSALTestsConfig.m */; };
 		232D614B2248484C00260C42 /* MSALClaimsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 232D61482248484C00260C42 /* MSALClaimsRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		232D614C2248484C00260C42 /* MSALClaimsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 232D61492248484C00260C42 /* MSALClaimsRequest.m */; };
 		232D614D2248484C00260C42 /* MSALClaimsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 232D61492248484C00260C42 /* MSALClaimsRequest.m */; };
@@ -821,6 +877,27 @@
 			remoteGlobalIDString = D626FF5A1FBA6E9500EE4487;
 			remoteInfo = "IdentityCore Mac";
 		};
+		2316A386266ED53F00A8C2EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6DFF39A1E2579360012891A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D65A6F421E3FD30A00C69FBA;
+			remoteInfo = "MSAL (iOS Framework)";
+		};
+		2316A388266ED53F00A8C2EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6A206191FC50A4D00755A51 /* IdentityCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B2ED1BA52204D24700A24E82;
+			remoteInfo = "IdentityLabAutomation iOS";
+		};
+		2316A38C266ED53F00A8C2EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6DFF39A1E2579360012891A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 231FC27A2666D9550061F47F;
+			remoteInfo = "OneAuth Test Automation (iOS) ";
+		};
 		231CE9D21FEC641D00E95D3E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D6A206191FC50A4D00755A51 /* IdentityCore.xcodeproj */;
@@ -841,6 +918,195 @@
 			proxyType = 1;
 			remoteGlobalIDString = D626FFDF1FBD1F5700EE4487;
 			remoteInfo = "IdentityTest Mac";
+		};
+		231FC27C2666D9550061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6DFF39A1E2579360012891A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D65A6F421E3FD30A00C69FBA;
+			remoteInfo = "MSAL (iOS Framework)";
+		};
+		231FC3122666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AB3EA43E57A448D5AFD9E48D;
+			remoteInfo = OneAuth;
+		};
+		231FC3142666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 000F61DF38E24CE59FC6FFE0;
+			remoteInfo = OneAuthTestApp;
+		};
+		231FC3162666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81384360598D411A94E5DF4D;
+			remoteInfo = OneAuthTestAppAppleUtils;
+		};
+		231FC3182666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 390745B208F34426B7AF9333;
+			remoteInfo = OneAuthTestHost;
+		};
+		231FC31A2666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E17E0768E1E044D0B89F3FCC;
+			remoteInfo = djinni_support_lib;
+		};
+		231FC31C2666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 94BF62CD3A0A4CE38FE3AD59;
+			remoteInfo = gmock;
+		};
+		231FC31E2666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1A534C95CE643319D848D09;
+			remoteInfo = gmock_main;
+		};
+		231FC3202666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 26BB053602B149E8A96F6F7D;
+			remoteInfo = gtest;
+		};
+		231FC3222666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA02DF48F07843D39DC12F5D;
+			remoteInfo = gtest_main;
+		};
+		231FC3242666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 266C57EB99754E48A50F2456;
+			remoteInfo = msalsdk;
+		};
+		231FC3262666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2DFBCCE289B644E6A0AA672B;
+			remoteInfo = oneauth_test_component_cpp_shared;
+		};
+		231FC3282666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAA32048A3A846709509D352;
+			remoteInfo = oneauth_test_component_objc_apple;
+		};
+		231FC32A2666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AF2F16559A45450E956FB61B;
+			remoteInfo = oneauth_test_scenario_cpp_shared;
+		};
+		231FC32C2666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FEBF74F6E1D9443E9F2A90B5;
+			remoteInfo = oneauth_test_scenario_objc_apple;
+		};
+		231FC32E2666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7230CEE64D394B9EB962B340;
+			remoteInfo = oneauth_test_ui_objc_ios;
+		};
+		231FC3302666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FDC01F8A24F746BA990D70B1;
+			remoteInfo = oneauth_test_ui_objc_ios_manual;
+		};
+		231FC3322666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3FF47F9E7AA74F5EABA9E522;
+			remoteInfo = oneauth_test_unit_cpp_shared;
+		};
+		231FC3342666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B9B0B046612E428DA568B331;
+			remoteInfo = oneauth_test_unit_objc_apple;
+		};
+		231FC3362666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4D9B59CF04AE4DADB65326A6;
+			remoteInfo = oneauth_test_unit_objc_ios;
+		};
+		231FC3382666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 20325827EC9D4E3E81F309E3;
+			remoteInfo = oneauth_testapp_shared_util;
+		};
+		231FC33A2666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 91D93DD51DB84E94832BAAEB;
+			remoteInfo = oneauth_testutils_apple;
+		};
+		231FC33C2666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D9D6756945D435681B6850A;
+			remoteInfo = oneauth_testutils_shared;
+		};
+		231FC33E2666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E44903D40F684E1C93636372;
+			remoteInfo = testutilities_ios;
+		};
+		231FC3402666E5B60061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A142EE9E1C7342E3AE024485;
+			remoteInfo = testutilities_xplat;
+		};
+		231FC3422666E6530061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 95537DD217C24C4B89407706;
+			remoteInfo = OneAuth;
+		};
+		231FC3552666F22A0061F47F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6DFF39A1E2579360012891A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 231FC27A2666D9550061F47F;
+			remoteInfo = "OneAuth Test Automation (iOS) ";
 		};
 		58BBA13225C141CA007B3EF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1045,6 +1311,28 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2316A3AE266ED53F00A8C2EB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2316A3AF266ED53F00A8C2EB /* MSAL.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		231FC2952666D9550061F47F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				231FC3452666E6890061F47F /* OneAuth.framework/OneAuth in Embed Frameworks */,
+				231FC2962666D9550061F47F /* MSAL.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B20E245621FEB30F0037CA5E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1135,8 +1423,30 @@
 		23014D172567233A005E12F2 /* MSALAuthenticationSchemeProtocolInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSALAuthenticationSchemeProtocolInternal.h; sourceTree = "<group>"; };
 		23014D4425672DF9005E12F2 /* MSALAuthenticationSchemePop+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSALAuthenticationSchemePop+Internal.h"; sourceTree = "<group>"; };
 		23014D4F25672E53005E12F2 /* MSALAuthenticationSchemeBearer+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSALAuthenticationSchemeBearer+Internal.h"; sourceTree = "<group>"; };
+		2316A3B4266ED53F00A8C2EB /* OneAuthInteractiveiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneAuthInteractiveiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2316A3D6266ED54000A8C2EB /* OneAuthInteractiveiOSTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = OneAuthInteractiveiOSTests.plist; path = "/Users/antrix1989/workspace/apple/microsoft-authentication-library-for-objc/MSAL/OneAuthInteractiveiOSTests.plist"; sourceTree = "<absolute>"; };
+		231831C92665AFB7002E9C89 /* MSALAutomationReadAccountsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSALAutomationReadAccountsAction.h; sourceTree = "<group>"; };
+		231831CA2665AFB7002E9C89 /* MSALAutomationExpireATAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSALAutomationExpireATAction.h; sourceTree = "<group>"; };
+		231831CB2665AFB7002E9C89 /* MSALAutomationRemoveAccountAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSALAutomationRemoveAccountAction.h; sourceTree = "<group>"; };
+		231831CC2665AFB7002E9C89 /* MSALAutomationInvalidateRTAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSALAutomationInvalidateRTAction.m; sourceTree = "<group>"; };
+		231831CD2665AFB7002E9C89 /* MSALAutomationAcquireTokenSilentAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSALAutomationAcquireTokenSilentAction.h; sourceTree = "<group>"; };
+		231831CE2665AFB7002E9C89 /* MSALAutomationAcquireTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSALAutomationAcquireTokenAction.h; sourceTree = "<group>"; };
+		231831CF2665AFB7002E9C89 /* MSALAutomationBaseAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSALAutomationBaseAction.m; sourceTree = "<group>"; };
+		231831D02665AFB7002E9C89 /* MSALAutomationExpireATAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSALAutomationExpireATAction.m; sourceTree = "<group>"; };
+		231831D12665AFB7002E9C89 /* MSALAutomationReadAccountsAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSALAutomationReadAccountsAction.m; sourceTree = "<group>"; };
+		231831D22665AFB7002E9C89 /* MSALAutomationAcquireTokenSilentAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSALAutomationAcquireTokenSilentAction.m; sourceTree = "<group>"; };
+		231831D32665AFB7002E9C89 /* MSALAutomationAcquireTokenAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSALAutomationAcquireTokenAction.m; sourceTree = "<group>"; };
+		231831D42665AFB7002E9C89 /* MSALAutomationInvalidateRTAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSALAutomationInvalidateRTAction.h; sourceTree = "<group>"; };
+		231831D52665AFB7002E9C89 /* MSALAutomationRemoveAccountAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSALAutomationRemoveAccountAction.m; sourceTree = "<group>"; };
+		231831D62665AFB7002E9C89 /* MSALAutomationBaseAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSALAutomationBaseAction.h; sourceTree = "<group>"; };
+		231831E52665B38F002E9C89 /* OneAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneAuth.framework; path = ../OneAuth.framework; sourceTree = "<group>"; };
 		231CE9DD1FEC684C00E95D3E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		231CE9E01FECBD4600E95D3E /* unit-test-host.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "unit-test-host.entitlements"; sourceTree = "<group>"; };
+		231FC29A2666D9550061F47F /* OneAuth Test Automation (iOS) .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OneAuth Test Automation (iOS) .app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		231FC29B2666D9560061F47F /* OneAuth Test Automation (iOS)-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OneAuth Test Automation (iOS)-Info.plist"; path = "/Users/antrix1989/workspace/apple/microsoft-authentication-library-for-objc/MSAL/OneAuth Test Automation (iOS)-Info.plist"; sourceTree = "<absolute>"; };
+		231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OneAuth.xcodeproj; path = "../OneAuth/_builds/ios-dep-11-0-bitcode-cxx17/OneAuth.xcodeproj"; sourceTree = "<group>"; };
+		231FC357266980D90061F47F /* MSALTestsConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSALTestsConfig.h; sourceTree = "<group>"; };
+		231FC358266980D90061F47F /* MSALTestsConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSALTestsConfig.m; sourceTree = "<group>"; };
 		232D61482248484C00260C42 /* MSALClaimsRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSALClaimsRequest.h; sourceTree = "<group>"; };
 		232D61492248484C00260C42 /* MSALClaimsRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSALClaimsRequest.m; sourceTree = "<group>"; };
 		232D615A22485B4600260C42 /* MSALIndividualClaimRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSALIndividualClaimRequest.h; sourceTree = "<group>"; };
@@ -1521,6 +1831,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2316A3A6266ED53F00A8C2EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2316A3A7266ED53F00A8C2EB /* libIdentityAutomationTestLib iOS.a in Frameworks */,
+				2316A3A8266ED53F00A8C2EB /* AuthenticationServices.framework in Frameworks */,
+				2316A3A9266ED53F00A8C2EB /* SafariServices.framework in Frameworks */,
+				2316A3AA266ED53F00A8C2EB /* WebKit.framework in Frameworks */,
+				2316A3AB266ED53F00A8C2EB /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		231FC28B2666D9550061F47F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				231FC28C2666D9550061F47F /* MSAL.framework in Frameworks */,
+				231FC28D2666D9550061F47F /* libIdentityAutomationAppLib iOS.a in Frameworks */,
+				231FC28E2666D9550061F47F /* WebKit.framework in Frameworks */,
+				231FC28F2666D9550061F47F /* Security.framework in Frameworks */,
+				231FC3442666E6890061F47F /* OneAuth.framework/OneAuth in Frameworks */,
+				231FC2902666D9550061F47F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		962E37B51E720C5D00DE71FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1640,6 +1975,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231831C82665AFB7002E9C89 /* oneauth_actions */ = {
+			isa = PBXGroup;
+			children = (
+				231831D62665AFB7002E9C89 /* MSALAutomationBaseAction.h */,
+				231831CF2665AFB7002E9C89 /* MSALAutomationBaseAction.m */,
+				231831CE2665AFB7002E9C89 /* MSALAutomationAcquireTokenAction.h */,
+				231831D32665AFB7002E9C89 /* MSALAutomationAcquireTokenAction.m */,
+				231831CD2665AFB7002E9C89 /* MSALAutomationAcquireTokenSilentAction.h */,
+				231831D22665AFB7002E9C89 /* MSALAutomationAcquireTokenSilentAction.m */,
+				231831C92665AFB7002E9C89 /* MSALAutomationReadAccountsAction.h */,
+				231831D12665AFB7002E9C89 /* MSALAutomationReadAccountsAction.m */,
+				231831CB2665AFB7002E9C89 /* MSALAutomationRemoveAccountAction.h */,
+				231831D52665AFB7002E9C89 /* MSALAutomationRemoveAccountAction.m */,
+				231831CA2665AFB7002E9C89 /* MSALAutomationExpireATAction.h */,
+				231831D02665AFB7002E9C89 /* MSALAutomationExpireATAction.m */,
+				231831D42665AFB7002E9C89 /* MSALAutomationInvalidateRTAction.h */,
+				231831CC2665AFB7002E9C89 /* MSALAutomationInvalidateRTAction.m */,
+			);
+			path = oneauth_actions;
+			sourceTree = "<group>";
+		};
+		231FC2F52666E5B50061F47F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				231FC3132666E5B60061F47F /* OneAuth.framework/OneAuth */,
+				231FC3152666E5B60061F47F /* OneAuthTestApp */,
+				231FC3172666E5B60061F47F /* libOneAuthTestAppAppleUtils.a */,
+				231FC3192666E5B60061F47F /* OneAuthTestHost */,
+				231FC31B2666E5B60061F47F /* libdjinni_support_lib.a */,
+				231FC31D2666E5B60061F47F /* libgmockd.a */,
+				231FC31F2666E5B60061F47F /* libgmock_maind.a */,
+				231FC3212666E5B60061F47F /* libgtestd.a */,
+				231FC3232666E5B60061F47F /* libgtest_maind.a */,
+				231FC3252666E5B60061F47F /* msalsdk.framework/msalsdk */,
+				231FC3272666E5B60061F47F /* oneauth_test_component_cpp_shared.xctest/oneauth_test_component_cpp_shared */,
+				231FC3292666E5B60061F47F /* oneauth_test_component_objc_apple.xctest/oneauth_test_component_objc_apple */,
+				231FC32B2666E5B60061F47F /* oneauth_test_scenario_cpp_shared.xctest/oneauth_test_scenario_cpp_shared */,
+				231FC32D2666E5B60061F47F /* oneauth_test_scenario_objc_apple.xctest/oneauth_test_scenario_objc_apple */,
+				231FC32F2666E5B60061F47F /* oneauth_test_ui_objc_ios.xctest/oneauth_test_ui_objc_ios */,
+				231FC3312666E5B60061F47F /* oneauth_test_ui_objc_ios_manual.xctest/oneauth_test_ui_objc_ios_manual */,
+				231FC3332666E5B60061F47F /* oneauth_test_unit_cpp_shared.xctest/oneauth_test_unit_cpp_shared */,
+				231FC3352666E5B60061F47F /* oneauth_test_unit_objc_apple.xctest/oneauth_test_unit_objc_apple */,
+				231FC3372666E5B60061F47F /* oneauth_test_unit_objc_ios.xctest/oneauth_test_unit_objc_ios */,
+				231FC3392666E5B60061F47F /* liboneauth_testapp_shared_util.a */,
+				231FC33B2666E5B60061F47F /* liboneauth_testutils_apple.a */,
+				231FC33D2666E5B60061F47F /* liboneauth_testutils_shared.a */,
+				231FC33F2666E5B60061F47F /* libtestutilities_ios.dylib */,
+				231FC3412666E5B60061F47F /* libtestutilities_xplat.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		238A362622EA390400F08167 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -1737,6 +2124,7 @@
 		962E37BF1E720E4F00DE71FE /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				231831C82665AFB7002E9C89 /* oneauth_actions */,
 				B25A439021C35A67000B3DD4 /* actions */,
 				B25F1BB81EC3DB1600474D1B /* util */,
 				9623025E1E7217740022A778 /* MSALAutomation.entitlements */,
@@ -1967,6 +2355,8 @@
 				B2BB738B2112C3F2000EA4C5 /* XCUIElement+MSALiOSUITests.m */,
 				B2BB73892112C3F2000EA4C5 /* XCUIElement+CrossPlat.h */,
 				B2BB738C2112C3F3000EA4C5 /* XCUIElement+CrossPlat.m */,
+				231FC357266980D90061F47F /* MSALTestsConfig.h */,
+				231FC358266980D90061F47F /* MSALTestsConfig.m */,
 				B2C232B02122A733008092C1 /* multiapp */,
 				B2BB73802112C3AC000EA4C5 /* interactive */,
 			);
@@ -2418,6 +2808,7 @@
 		D6A2062E1FC5106F00755A51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				231831E52665B38F002E9C89 /* OneAuth.framework */,
 				B2EE86E223751CAE00D0BC96 /* AuthenticationServices.framework */,
 				1E1A2E052256D194001009ED /* AppKit.framework */,
 				963C89A6214BA1760051AFEE /* AuthenticationServices.framework */,
@@ -2442,6 +2833,7 @@
 		D6DFF3991E2579360012891A = {
 			isa = PBXGroup;
 			children = (
+				231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */,
 				231CE9E01FECBD4600E95D3E /* unit-test-host.entitlements */,
 				D6A206191FC50A4D00755A51 /* IdentityCore.xcodeproj */,
 				D65A6F671E3FF3D900C69FBA /* src */,
@@ -2451,6 +2843,8 @@
 				D6DFF3A31E2579360012891A /* Products */,
 				D6A2062E1FC5106F00755A51 /* Frameworks */,
 				238A362622EA390400F08167 /* Recovered References */,
+				231FC29B2666D9560061F47F /* OneAuth Test Automation (iOS)-Info.plist */,
+				2316A3D6266ED54000A8C2EB /* OneAuthInteractiveiOSTests.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2470,6 +2864,8 @@
 				04A6B57B226921890035C7C2 /* libMSAL (iOS Static Library).a */,
 				04A6B59C2269286F0035C7C2 /* libMSAL (macOS Static Library).a */,
 				B295A16422D0348400FFB313 /* unit-test-host-mac.app */,
+				231FC29A2666D9550061F47F /* OneAuth Test Automation (iOS) .app */,
+				2316A3B4266ED53F00A8C2EB /* OneAuthInteractiveiOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2924,6 +3320,49 @@
 			productReference = 1E614BDA22558D8300EBF62F /* MSAL Test App (Mac).app */;
 			productType = "com.apple.product-type.application";
 		};
+		2316A384266ED53F00A8C2EB /* OneAuthInteractiveiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2316A3B1266ED53F00A8C2EB /* Build configuration list for PBXNativeTarget "OneAuthInteractiveiOSTests" */;
+			buildPhases = (
+				2316A38D266ED53F00A8C2EB /* Sources */,
+				2316A3A6266ED53F00A8C2EB /* Frameworks */,
+				2316A3AC266ED53F00A8C2EB /* Resources */,
+				2316A3AD266ED53F00A8C2EB /* ShellScript */,
+				2316A3AE266ED53F00A8C2EB /* CopyFiles */,
+				2316A3B0266ED53F00A8C2EB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2316A385266ED53F00A8C2EB /* PBXTargetDependency */,
+				2316A387266ED53F00A8C2EB /* PBXTargetDependency */,
+				2316A38B266ED53F00A8C2EB /* PBXTargetDependency */,
+			);
+			name = OneAuthInteractiveiOSTests;
+			productName = InteractiveiOSTests;
+			productReference = 2316A3B4266ED53F00A8C2EB /* OneAuthInteractiveiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		231FC27A2666D9550061F47F /* OneAuth Test Automation (iOS)  */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 231FC2972666D9550061F47F /* Build configuration list for PBXNativeTarget "OneAuth Test Automation (iOS) " */;
+			buildPhases = (
+				231FC27D2666D9550061F47F /* Sources */,
+				231FC28B2666D9550061F47F /* Frameworks */,
+				231FC2912666D9550061F47F /* Resources */,
+				231FC2952666D9550061F47F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				231FC3432666E6530061F47F /* PBXTargetDependency */,
+				231FC27B2666D9550061F47F /* PBXTargetDependency */,
+			);
+			name = "OneAuth Test Automation (iOS) ";
+			productName = MSALTestApp;
+			productReference = 231FC29A2666D9550061F47F /* OneAuth Test Automation (iOS) .app */;
+			productType = "com.apple.product-type.application";
+		};
 		962E37A61E720C5D00DE71FE /* MSAL Test Automation (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 962E37B91E720C5D00DE71FE /* Build configuration list for PBXNativeTarget "MSAL Test Automation (iOS)" */;
@@ -3000,6 +3439,7 @@
 				58BBA13325C141CA007B3EF6 /* PBXTargetDependency */,
 				B21FA9C12204DC6F00806B68 /* PBXTargetDependency */,
 				B2BB73762112C32C000EA4C5 /* PBXTargetDependency */,
+				231FC3562666F22A0061F47F /* PBXTargetDependency */,
 			);
 			name = InteractiveiOSTests;
 			productName = InteractiveiOSTests;
@@ -3152,6 +3592,14 @@
 							};
 						};
 					};
+					2316A384266ED53F00A8C2EB = {
+						DevelopmentTeam = UBF8T346G9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 231FC27A2666D9550061F47F;
+					};
+					231FC27A2666D9550061F47F = {
+						DevelopmentTeam = UBF8T346G9;
+					};
 					962E37A61E720C5D00DE71FE = {
 						DevelopmentTeam = UBF8T346G9;
 						ProvisioningStyle = Automatic;
@@ -3234,6 +3682,10 @@
 					ProductGroup = D6A2061A1FC50A4D00755A51 /* Products */;
 					ProjectRef = D6A206191FC50A4D00755A51 /* IdentityCore.xcodeproj */;
 				},
+				{
+					ProductGroup = 231FC2F52666E5B50061F47F /* Products */;
+					ProjectRef = 231FC2F42666E5B50061F47F /* OneAuth.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -3250,6 +3702,8 @@
 				04A6B57A226921890035C7C2 /* MSAL (iOS Static Library) */,
 				04A6B59B2269286F0035C7C2 /* MSAL (Mac Static Library) */,
 				B295A16322D0348400FFB313 /* unit-test-host-mac */,
+				231FC27A2666D9550061F47F /* OneAuth Test Automation (iOS)  */,
+				2316A384266ED53F00A8C2EB /* OneAuthInteractiveiOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -3260,6 +3714,187 @@
 			fileType = wrapper.application;
 			path = MSIDTestsHostApp.app;
 			remoteRef = 231CE9D21FEC641D00E95D3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3132666E5B60061F47F /* OneAuth.framework/OneAuth */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = OneAuth.framework/OneAuth;
+			path = OneAuth.framework;
+			remoteRef = 231FC3122666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3152666E5B60061F47F /* OneAuthTestApp */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			name = OneAuthTestApp;
+			path = OneAuthTestApp.app;
+			remoteRef = 231FC3142666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3172666E5B60061F47F /* libOneAuthTestAppAppleUtils.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOneAuthTestAppAppleUtils.a;
+			remoteRef = 231FC3162666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3192666E5B60061F47F /* OneAuthTestHost */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			name = OneAuthTestHost;
+			path = OneAuthTestHost.app;
+			remoteRef = 231FC3182666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC31B2666E5B60061F47F /* libdjinni_support_lib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libdjinni_support_lib.a;
+			remoteRef = 231FC31A2666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC31D2666E5B60061F47F /* libgmockd.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgmockd.a;
+			remoteRef = 231FC31C2666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC31F2666E5B60061F47F /* libgmock_maind.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgmock_maind.a;
+			remoteRef = 231FC31E2666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3212666E5B60061F47F /* libgtestd.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgtestd.a;
+			remoteRef = 231FC3202666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3232666E5B60061F47F /* libgtest_maind.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libgtest_maind.a;
+			remoteRef = 231FC3222666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3252666E5B60061F47F /* msalsdk.framework/msalsdk */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = msalsdk.framework/msalsdk;
+			path = msalsdk.framework;
+			remoteRef = 231FC3242666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3272666E5B60061F47F /* oneauth_test_component_cpp_shared.xctest/oneauth_test_component_cpp_shared */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = oneauth_test_component_cpp_shared.xctest/oneauth_test_component_cpp_shared;
+			path = oneauth_test_component_cpp_shared.xctest;
+			remoteRef = 231FC3262666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3292666E5B60061F47F /* oneauth_test_component_objc_apple.xctest/oneauth_test_component_objc_apple */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = oneauth_test_component_objc_apple.xctest/oneauth_test_component_objc_apple;
+			path = oneauth_test_component_objc_apple.xctest;
+			remoteRef = 231FC3282666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC32B2666E5B60061F47F /* oneauth_test_scenario_cpp_shared.xctest/oneauth_test_scenario_cpp_shared */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = oneauth_test_scenario_cpp_shared.xctest/oneauth_test_scenario_cpp_shared;
+			path = oneauth_test_scenario_cpp_shared.xctest;
+			remoteRef = 231FC32A2666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC32D2666E5B60061F47F /* oneauth_test_scenario_objc_apple.xctest/oneauth_test_scenario_objc_apple */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = oneauth_test_scenario_objc_apple.xctest/oneauth_test_scenario_objc_apple;
+			path = oneauth_test_scenario_objc_apple.xctest;
+			remoteRef = 231FC32C2666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC32F2666E5B60061F47F /* oneauth_test_ui_objc_ios.xctest/oneauth_test_ui_objc_ios */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = oneauth_test_ui_objc_ios.xctest/oneauth_test_ui_objc_ios;
+			path = oneauth_test_ui_objc_ios.xctest;
+			remoteRef = 231FC32E2666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3312666E5B60061F47F /* oneauth_test_ui_objc_ios_manual.xctest/oneauth_test_ui_objc_ios_manual */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = oneauth_test_ui_objc_ios_manual.xctest/oneauth_test_ui_objc_ios_manual;
+			path = oneauth_test_ui_objc_ios_manual.xctest;
+			remoteRef = 231FC3302666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3332666E5B60061F47F /* oneauth_test_unit_cpp_shared.xctest/oneauth_test_unit_cpp_shared */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = oneauth_test_unit_cpp_shared.xctest/oneauth_test_unit_cpp_shared;
+			path = oneauth_test_unit_cpp_shared.xctest;
+			remoteRef = 231FC3322666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3352666E5B60061F47F /* oneauth_test_unit_objc_apple.xctest/oneauth_test_unit_objc_apple */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = oneauth_test_unit_objc_apple.xctest/oneauth_test_unit_objc_apple;
+			path = oneauth_test_unit_objc_apple.xctest;
+			remoteRef = 231FC3342666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3372666E5B60061F47F /* oneauth_test_unit_objc_ios.xctest/oneauth_test_unit_objc_ios */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = oneauth_test_unit_objc_ios.xctest/oneauth_test_unit_objc_ios;
+			path = oneauth_test_unit_objc_ios.xctest;
+			remoteRef = 231FC3362666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3392666E5B60061F47F /* liboneauth_testapp_shared_util.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liboneauth_testapp_shared_util.a;
+			remoteRef = 231FC3382666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC33B2666E5B60061F47F /* liboneauth_testutils_apple.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liboneauth_testutils_apple.a;
+			remoteRef = 231FC33A2666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC33D2666E5B60061F47F /* liboneauth_testutils_shared.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liboneauth_testutils_shared.a;
+			remoteRef = 231FC33C2666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC33F2666E5B60061F47F /* libtestutilities_ios.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libtestutilities_ios.dylib;
+			remoteRef = 231FC33E2666E5B60061F47F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		231FC3412666E5B60061F47F /* libtestutilities_xplat.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libtestutilities_xplat.a;
+			remoteRef = 231FC3402666E5B60061F47F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		B21FA9BC2204DC5700806B68 /* libIdentityAutomationTestLib iOS.a */ = {
@@ -3351,6 +3986,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2316A3AC266ED53F00A8C2EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		231FC2912666D9550061F47F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				231FC2922666D9550061F47F /* MainAutomation.storyboard in Resources */,
+				231FC2932666D9550061F47F /* Launch Screen.storyboard in Resources */,
+				231FC2942666D9550061F47F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		962E37B71E720C5D00DE71FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3439,6 +4091,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2316A3AD266ED53F00A8C2EB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILENAME=conf.json\nRESOURCE_PATH=~/aadtests/$FILENAME\nBUILD_APP_DIR=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}-Runner.app/PlugIns/${PRODUCT_NAME}.xctest\n\nif [ -e $RESOURCE_PATH ]\nthen cp $RESOURCE_PATH $BUILD_APP_DIR/$FILENAME\nfi\n";
+		};
+		2316A3B0266ED53F00A8C2EB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nxattr -cr ~/Library/Developer/Xcode/DerivedData || echo Clear\n";
+		};
 		B286864824037DCB004E83FC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3644,6 +4326,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2316A38D266ED53F00A8C2EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2316A38E266ED53F00A8C2EB /* XCUIElement+CrossPlat.m in Sources */,
+				2316A38F266ED53F00A8C2EB /* MSALBlackforestUITests.m in Sources */,
+				2316A390266ED53F00A8C2EB /* MSALTestsConfig.m in Sources */,
+				2316A391266ED53F00A8C2EB /* MSALNationalCloudUITest.m in Sources */,
+				2316A392266ED53F00A8C2EB /* MSALADFSBaseUITest.m in Sources */,
+				2316A393266ED53F00A8C2EB /* MSALBaseiOSUITest.m in Sources */,
+				2316A394266ED53F00A8C2EB /* MSALCacheRemovalTests.m in Sources */,
+				2316A395266ED53F00A8C2EB /* MSALChinaCloudUITests.m in Sources */,
+				2316A396266ED53F00A8C2EB /* MSALPingUITests.m in Sources */,
+				2316A397266ED53F00A8C2EB /* XCUIElement+MSALiOSUITests.m in Sources */,
+				2316A398266ED53F00A8C2EB /* MSALADFSv3FederatedTests.m in Sources */,
+				2316A399266ED53F00A8C2EB /* MSALBaseAADUITest.m in Sources */,
+				2316A39A266ED53F00A8C2EB /* MSALB2CInteractiveTests.m in Sources */,
+				2316A39B266ED53F00A8C2EB /* MSALShibUITests.m in Sources */,
+				2316A39C266ED53F00A8C2EB /* MSALAADBasicInteractiveTests.m in Sources */,
+				2316A39D266ED53F00A8C2EB /* MSALGuestUserTests.m in Sources */,
+				2316A39E266ED53F00A8C2EB /* MSALMSABasicInteractiveTests.m in Sources */,
+				2316A39F266ED53F00A8C2EB /* MSALBaseUITest.m in Sources */,
+				2316A3A0266ED53F00A8C2EB /* NSDictionary+MSALiOSUITests.m in Sources */,
+				2316A3A1266ED53F00A8C2EB /* XCTestCase+TextFieldTap.m in Sources */,
+				2316A3A2266ED53F00A8C2EB /* MSALUSGovUITests.m in Sources */,
+				2316A3A3266ED53F00A8C2EB /* MSALAADMultiUserTests.m in Sources */,
+				2316A3A4266ED53F00A8C2EB /* MSALUITests.swift in Sources */,
+				2316A3A5266ED53F00A8C2EB /* MSALADFSv4FederatedTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		231FC27D2666D9550061F47F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				231FC27E2666D9550061F47F /* MSALUser+Automation.m in Sources */,
+				231FC2842666D9550061F47F /* main.m in Sources */,
+				231FC3522666F2020061F47F /* MSALAutomationRemoveAccountAction.m in Sources */,
+				231FC3532666F2050061F47F /* MSALAutomationExpireATAction.m in Sources */,
+				231FC3542666F2070061F47F /* MSALAutomationInvalidateRTAction.m in Sources */,
+				231FC2852666D9550061F47F /* MSALResult+Automation.m in Sources */,
+				231FC2862666D9550061F47F /* MSALAutoAppDelegate.m in Sources */,
+				231FC3502666F1FC0061F47F /* MSALAutomationAcquireTokenSilentAction.m in Sources */,
+				231FC34F2666F1EB0061F47F /* MSALAutomationAcquireTokenAction.m in Sources */,
+				231FC2872666D9550061F47F /* MSIDTokenCacheItem+Automation.m in Sources */,
+				231FC3512666F1FF0061F47F /* MSALAutomationReadAccountsAction.m in Sources */,
+				231FC28A2666D9550061F47F /* MSALUITests.swift in Sources */,
+				231FC34E2666F1CC0061F47F /* MSALAutomationBaseAction.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		962E37A91E720C5D00DE71FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3679,6 +4412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29E2ADF21238FBE00B170ED /* MSALBaseiOSUITest.m in Sources */,
+				231FC35A26698BCA0061F47F /* MSALTestsConfig.m in Sources */,
 				B29E2AE221238FBE00B170ED /* MSALBaseUITest.m in Sources */,
 				B29E2ADE21238FB800B170ED /* MSALUITests.swift in Sources */,
 				B29E2AE521238FBE00B170ED /* XCUIElement+MSALiOSUITests.m in Sources */,
@@ -3697,6 +4431,7 @@
 			files = (
 				B2BB73922112C3F3000EA4C5 /* XCUIElement+CrossPlat.m in Sources */,
 				B2D0A38B21C70D800071E0DA /* MSALBlackforestUITests.m in Sources */,
+				231FC359266980D90061F47F /* MSALTestsConfig.m in Sources */,
 				B282255F23EF97C50007DFE4 /* MSALNationalCloudUITest.m in Sources */,
 				B21F9DEA2120E89E00B1B40C /* MSALADFSBaseUITest.m in Sources */,
 				B2BB738D2112C3F3000EA4C5 /* MSALBaseiOSUITest.m in Sources */,
@@ -3975,6 +4710,21 @@
 			name = "IdentityCore Mac";
 			targetProxy = 04A6B5AC226935190035C7C2 /* PBXContainerItemProxy */;
 		};
+		2316A385266ED53F00A8C2EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D65A6F421E3FD30A00C69FBA /* MSAL (iOS Framework) */;
+			targetProxy = 2316A386266ED53F00A8C2EB /* PBXContainerItemProxy */;
+		};
+		2316A387266ED53F00A8C2EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "IdentityLabAutomation iOS";
+			targetProxy = 2316A388266ED53F00A8C2EB /* PBXContainerItemProxy */;
+		};
+		2316A38B266ED53F00A8C2EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 231FC27A2666D9550061F47F /* OneAuth Test Automation (iOS)  */;
+			targetProxy = 2316A38C266ED53F00A8C2EB /* PBXContainerItemProxy */;
+		};
 		231CE9D91FEC677D00E95D3E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "IdentityTest iOS";
@@ -3984,6 +4734,21 @@
 			isa = PBXTargetDependency;
 			name = "IdentityTest Mac";
 			targetProxy = 231CE9DA1FEC678400E95D3E /* PBXContainerItemProxy */;
+		};
+		231FC27B2666D9550061F47F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D65A6F421E3FD30A00C69FBA /* MSAL (iOS Framework) */;
+			targetProxy = 231FC27C2666D9550061F47F /* PBXContainerItemProxy */;
+		};
+		231FC3432666E6530061F47F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OneAuth;
+			targetProxy = 231FC3422666E6530061F47F /* PBXContainerItemProxy */;
+		};
+		231FC3562666F22A0061F47F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 231FC27A2666D9550061F47F /* OneAuth Test Automation (iOS)  */;
+			targetProxy = 231FC3552666F22A0061F47F /* PBXContainerItemProxy */;
 		};
 		58BBA13325C141CA007B3EF6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4273,6 +5038,184 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $IDCORE_PATH/src/** $(HOME)/aadoverrides";
+			};
+			name = Release;
+		};
+		2316A3B2266ED53F00A8C2EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2BB73962112C4B3000EA4C5 /* msal__ui_test__ios.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UBF8T346G9;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OneAuthInteractiveiOSTests.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks @executable_path/Frameworks $(inherited)";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.InteractiveiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "OneAuth Test Automation (iOS) ";
+			};
+			name = Debug;
+		};
+		2316A3B3266ED53F00A8C2EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2BB73962112C4B3000EA4C5 /* msal__ui_test__ios.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UBF8T346G9;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OneAuthInteractiveiOSTests.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks @executable_path/Frameworks $(inherited)";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.InteractiveiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "OneAuth Test Automation (iOS) ";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		231FC2982666D9550061F47F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 962E37A51E720B7E00DE71FE /* msal__automation_app__ios.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_ENTITLEMENTS = test/automation/ios/MSALAutomation.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UBF8T346G9;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					"/Users/antrix1989/workspace/apple/microsoft-authentication-library-for-objc/OneAuth/sources/public/apple",
+					"/Users/antrix1989/workspace/apple/microsoft-authentication-library-for-objc/OneAuth",
+				);
+				INFOPLIST_FILE = "OneAuth Test Automation (iOS)-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.MSALAutomationApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "$IDCORE_PATH/tests/automation/** $IDCORE_PATH/src/**";
+			};
+			name = Debug;
+		};
+		231FC2992666D9550061F47F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 962E37A51E720B7E00DE71FE /* msal__automation_app__ios.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_ENTITLEMENTS = test/automation/ios/MSALAutomation.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UBF8T346G9;
+				HEADER_SEARCH_PATHS = (
+					"/Users/antrix1989/workspace/apple/microsoft-authentication-library-for-objc/OneAuth/sources/public/apple",
+					"/Users/antrix1989/workspace/apple/microsoft-authentication-library-for-objc/OneAuth",
+				);
+				INFOPLIST_FILE = "OneAuth Test Automation (iOS)-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.MSALAutomationApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "$IDCORE_PATH/tests/automation/** $IDCORE_PATH/src/**";
 			};
 			name = Release;
 		};
@@ -4912,6 +5855,24 @@
 			buildConfigurations = (
 				1E614BEC22558D8300EBF62F /* Debug */,
 				1E614BED22558D8300EBF62F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2316A3B1266ED53F00A8C2EB /* Build configuration list for PBXNativeTarget "OneAuthInteractiveiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2316A3B2266ED53F00A8C2EB /* Debug */,
+				2316A3B3266ED53F00A8C2EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		231FC2972666D9550061F47F /* Build configuration list for PBXNativeTarget "OneAuth Test Automation (iOS) " */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				231FC2982666D9550061F47F /* Debug */,
+				231FC2992666D9550061F47F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

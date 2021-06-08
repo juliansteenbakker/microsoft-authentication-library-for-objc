@@ -68,7 +68,7 @@ static BOOL adalAppInstalled = NO;
     // 1. Install previous ADAL version and signin
     self.testApp = [self olderADALApp];
     
-    MSIDAutomationTestRequest *adalRequest = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId];
+    MSIDAutomationTestRequest *adalRequest = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     adalRequest.promptBehavior = @"always";
     adalRequest.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:@"common"];
 
@@ -86,7 +86,7 @@ static BOOL adalAppInstalled = NO;
     self.testApp = [XCUIApplication new];
     [self.testApp activate];
 
-    MSIDAutomationTestRequest *msalRequest = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId];
+    MSIDAutomationTestRequest *msalRequest = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     msalRequest.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:@"organizations"];
     msalRequest.legacyAccountIdentifier = self.primaryAccount.upn;
     msalRequest.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"aad_graph_static"];
@@ -137,7 +137,7 @@ static BOOL adalAppInstalled = NO;
     // 1. Install previous ADAL version and signin
     self.testApp = [self olderADALApp];
     
-    MSIDAutomationTestRequest *adalRequest = [self.class.confProvider defaultAppRequest:@"ww-alias" targetTenantId:self.primaryAccount.targetTenantId];
+    MSIDAutomationTestRequest *adalRequest = [self.class.confProvider defaultAppRequest:@"ww-alias" targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     adalRequest.promptBehavior = @"always";
     adalRequest.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:@"ww-alias" tenantId:@"common"];
 
@@ -159,7 +159,7 @@ static BOOL adalAppInstalled = NO;
     self.testApp = [XCUIApplication new];
     [self.testApp activate];
     
-    MSIDAutomationTestRequest *msalRequest = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId];
+    MSIDAutomationTestRequest *msalRequest = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:YES];
     msalRequest.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:@"common"];
     msalRequest.legacyAccountIdentifier = self.primaryAccount.upn;
     msalRequest.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"ms_graph"];
