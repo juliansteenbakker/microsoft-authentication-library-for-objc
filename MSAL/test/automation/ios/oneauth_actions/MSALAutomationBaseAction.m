@@ -132,10 +132,9 @@
 
 - (MSIDAutomationTestResult *)testResultWithMALError:(MALError *)error
 {
-//    return [[MSIDAutomationErrorResult alloc] initWithAction:self.actionIdentifier
-//                                                       error:nil
-//                                              additionalInfo:nil];
-    return nil;
+    return [[MSIDAutomationErrorResult alloc] initWithAction:self.actionIdentifier
+                                                       error:error
+                                              additionalInfo:nil];
 }
 
 - (MSIDAutomationTestResult *)testResultWithMALAuthResult:(MALAuthResult *)authResult

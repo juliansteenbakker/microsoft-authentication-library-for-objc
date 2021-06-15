@@ -42,4 +42,10 @@
     return NO;
 }
 
++ (NSInteger)cancelErrorCode
+{
+    return 7; //MALStatusUserCanceled
+}
+
+
 @end

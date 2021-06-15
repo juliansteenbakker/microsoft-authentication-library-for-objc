@@ -155,7 +155,6 @@
 		23014D5125672E53005E12F2 /* MSALAuthenticationSchemeBearer+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 23014D4F25672E53005E12F2 /* MSALAuthenticationSchemeBearer+Internal.h */; };
 		2316A38E266ED53F00A8C2EB /* XCUIElement+CrossPlat.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB738C2112C3F3000EA4C5 /* XCUIElement+CrossPlat.m */; };
 		2316A38F266ED53F00A8C2EB /* MSALBlackforestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C2329F21224C21008092C1 /* MSALBlackforestUITests.m */; };
-		2316A390266ED53F00A8C2EB /* MSALTestsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 231FC358266980D90061F47F /* MSALTestsConfig.m */; };
 		2316A391266ED53F00A8C2EB /* MSALNationalCloudUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = B282255E23EF97C50007DFE4 /* MSALNationalCloudUITest.m */; };
 		2316A392266ED53F00A8C2EB /* MSALADFSBaseUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = B21F9DE92120E89E00B1B40C /* MSALADFSBaseUITest.m */; };
 		2316A393266ED53F00A8C2EB /* MSALBaseiOSUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB73812112C3F1000EA4C5 /* MSALBaseiOSUITest.m */; };
@@ -210,8 +209,9 @@
 		231FC3522666F2020061F47F /* MSALAutomationRemoveAccountAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 231831D52665AFB7002E9C89 /* MSALAutomationRemoveAccountAction.m */; };
 		231FC3532666F2050061F47F /* MSALAutomationExpireATAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 231831D02665AFB7002E9C89 /* MSALAutomationExpireATAction.m */; };
 		231FC3542666F2070061F47F /* MSALAutomationInvalidateRTAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 231831CC2665AFB7002E9C89 /* MSALAutomationInvalidateRTAction.m */; };
-		231FC359266980D90061F47F /* MSALTestsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 231FC358266980D90061F47F /* MSALTestsConfig.m */; };
-		231FC35A26698BCA0061F47F /* MSALTestsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 231FC358266980D90061F47F /* MSALTestsConfig.m */; };
+		232041CB2678581C005DBB44 /* MSALTestsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 231FC358266980D90061F47F /* MSALTestsConfig.m */; };
+		232041CC2678581C005DBB44 /* MSALTestsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 231FC358266980D90061F47F /* MSALTestsConfig.m */; };
+		232041CD2678585F005DBB44 /* MSALTestsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 231FC358266980D90061F47F /* MSALTestsConfig.m */; };
 		232D614B2248484C00260C42 /* MSALClaimsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 232D61482248484C00260C42 /* MSALClaimsRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		232D614C2248484C00260C42 /* MSALClaimsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 232D61492248484C00260C42 /* MSALClaimsRequest.m */; };
 		232D614D2248484C00260C42 /* MSALClaimsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 232D61492248484C00260C42 /* MSALClaimsRequest.m */; };
@@ -4332,7 +4332,7 @@
 			files = (
 				2316A38E266ED53F00A8C2EB /* XCUIElement+CrossPlat.m in Sources */,
 				2316A38F266ED53F00A8C2EB /* MSALBlackforestUITests.m in Sources */,
-				2316A390266ED53F00A8C2EB /* MSALTestsConfig.m in Sources */,
+				232041CD2678585F005DBB44 /* MSALTestsConfig.m in Sources */,
 				2316A391266ED53F00A8C2EB /* MSALNationalCloudUITest.m in Sources */,
 				2316A392266ED53F00A8C2EB /* MSALADFSBaseUITest.m in Sources */,
 				2316A393266ED53F00A8C2EB /* MSALBaseiOSUITest.m in Sources */,
@@ -4412,7 +4412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29E2ADF21238FBE00B170ED /* MSALBaseiOSUITest.m in Sources */,
-				231FC35A26698BCA0061F47F /* MSALTestsConfig.m in Sources */,
+				232041CB2678581C005DBB44 /* MSALTestsConfig.m in Sources */,
 				B29E2AE221238FBE00B170ED /* MSALBaseUITest.m in Sources */,
 				B29E2ADE21238FB800B170ED /* MSALUITests.swift in Sources */,
 				B29E2AE521238FBE00B170ED /* XCUIElement+MSALiOSUITests.m in Sources */,
@@ -4431,7 +4431,7 @@
 			files = (
 				B2BB73922112C3F3000EA4C5 /* XCUIElement+CrossPlat.m in Sources */,
 				B2D0A38B21C70D800071E0DA /* MSALBlackforestUITests.m in Sources */,
-				231FC359266980D90061F47F /* MSALTestsConfig.m in Sources */,
+				232041CC2678581C005DBB44 /* MSALTestsConfig.m in Sources */,
 				B282255F23EF97C50007DFE4 /* MSALNationalCloudUITest.m in Sources */,
 				B21F9DEA2120E89E00B1B40C /* MSALADFSBaseUITest.m in Sources */,
 				B2BB738D2112C3F3000EA4C5 /* MSALBaseiOSUITest.m in Sources */,
