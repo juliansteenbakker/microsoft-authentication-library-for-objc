@@ -37,6 +37,7 @@
 @class MSIDDefaultTokenCacheAccessor;
 @class MSIDAccountCredentialCache;
 @class MALAuthResult;
+@class MALError;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -49,8 +50,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (MSALPublicClientApplication *)applicationWithParameters:(MSIDAutomationTestRequest *)parameters
                                                      error:(NSError **)error;
 
-- (MSIDAutomationTestResult *)testResultWithMSALError:(NSError *)error;
-- (MSIDAutomationTestResult *)testResultWithMSALResult:(MSALResult *)msalResult error:(NSError *)error;
+- (MSIDAutomationTestResult *)testResultWithMALError:(MALError *)error;
+//- (MSIDAutomationTestResult *)testResultWithMSALResult:(MSALResult *)msalResult error:(NSError *)error;
 - (MSIDAutomationTestResult *)testResultWithMALAuthResult:(MALAuthResult *)authResult;
 
 - (MSALAccount *)accountWithParameters:(MSIDAutomationTestRequest *)parameters

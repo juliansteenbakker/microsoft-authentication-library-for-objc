@@ -58,76 +58,76 @@
                 containerController:(__unused MSIDAutoViewController *)containerController
                     completionBlock:(MSIDAutoCompletionBlock)completionBlock
 {
-    NSError *applicationError = nil;
-    MSALPublicClientApplication *application = [self applicationWithParameters:testRequest error:nil];
-
-    if (!application)
-    {
-        MSIDAutomationTestResult *result = [self testResultWithMSALError:applicationError];
-        completionBlock(result);
-        return;
-    }
-
-    NSError *accountError = nil;
-    MSALAccount *account = [self accountWithParameters:testRequest application:application error:&accountError];
-
-    if (!account)
-    {
-        MSIDAutomationTestResult *result = nil;
-
-        if (accountError)
-        {
-            result = [self testResultWithMSALError:accountError];
-        }
-        else
-        {
-            NSError *error = MSIDCreateError(MSALErrorDomain, MSALErrorInteractionRequired, @"no account", nil, nil, nil, nil, nil, YES);
-
-            result = [[MSIDAutomationErrorResult alloc] initWithAction:self.actionIdentifier
-                                                                 error:error
-                                                        additionalInfo:nil];
-        }
-
-        completionBlock(result);
-        return;
-    }
-
-    NSOrderedSet *scopes = [NSOrderedSet msidOrderedSetFromString:testRequest.requestScopes];
-    BOOL forceRefresh = testRequest.forceRefresh;
-    NSUUID *correlationId = [NSUUID new];
-
-    MSALAuthority *silentAuthority = nil;
-
-    if (testRequest.acquireTokenAuthority)
-    {
-        // In case we want to pass a different authority to silent call, we can use "silent authority" parameter
-        silentAuthority = [MSALAuthority authorityWithURL:[NSURL URLWithString:testRequest.acquireTokenAuthority] error:nil];
-    }
-    
-    MSALClaimsRequest *claimsRequest = nil;
-    
-    if (testRequest.claims.length)
-    {
-        NSError *claimsError;
-        claimsRequest = [[MSALClaimsRequest alloc] initWithJsonString:testRequest.claims error:&claimsError];
-        if (claimsError)
-        {
-            MSIDAutomationTestResult *result = [self testResultWithMSALError:claimsError];
-            completionBlock(result);
-            return;
-        }
-    }
-    
-    MSALSilentTokenParameters *parameters = [[MSALSilentTokenParameters alloc] initWithScopes:[scopes array] account:account];
-    parameters.authority = silentAuthority;
-    parameters.forceRefresh = forceRefresh;
-    parameters.correlationId = correlationId;
-    parameters.completionBlockQueue = dispatch_get_main_queue();
-    [application acquireTokenSilentWithParameters:parameters completionBlock:^(MSALResult *result, NSError *error)
-     {
-        MSIDAutomationTestResult *testResult = [self testResultWithMSALResult:result error:error];
-        completionBlock(testResult);
-     }];
+//    NSError *applicationError = nil;
+//    MSALPublicClientApplication *application = [self applicationWithParameters:testRequest error:nil];
+//
+//    if (!application)
+//    {
+//        MSIDAutomationTestResult *result = [self testResultWithMSALError:applicationError];
+//        completionBlock(result);
+//        return;
+//    }
+//
+//    NSError *accountError = nil;
+//    MSALAccount *account = [self accountWithParameters:testRequest application:application error:&accountError];
+//
+//    if (!account)
+//    {
+//        MSIDAutomationTestResult *result = nil;
+//
+//        if (accountError)
+//        {
+//            result = [self testResultWithMSALError:accountError];
+//        }
+//        else
+//        {
+//            NSError *error = MSIDCreateError(MSALErrorDomain, MSALErrorInteractionRequired, @"no account", nil, nil, nil, nil, nil, YES);
+//
+//            result = [[MSIDAutomationErrorResult alloc] initWithAction:self.actionIdentifier
+//                                                                 error:error
+//                                                        additionalInfo:nil];
+//        }
+//
+//        completionBlock(result);
+//        return;
+//    }
+//
+//    NSOrderedSet *scopes = [NSOrderedSet msidOrderedSetFromString:testRequest.requestScopes];
+//    BOOL forceRefresh = testRequest.forceRefresh;
+//    NSUUID *correlationId = [NSUUID new];
+//
+//    MSALAuthority *silentAuthority = nil;
+//
+//    if (testRequest.acquireTokenAuthority)
+//    {
+//        // In case we want to pass a different authority to silent call, we can use "silent authority" parameter
+//        silentAuthority = [MSALAuthority authorityWithURL:[NSURL URLWithString:testRequest.acquireTokenAuthority] error:nil];
+//    }
+//    
+//    MSALClaimsRequest *claimsRequest = nil;
+//    
+//    if (testRequest.claims.length)
+//    {
+//        NSError *claimsError;
+//        claimsRequest = [[MSALClaimsRequest alloc] initWithJsonString:testRequest.claims error:&claimsError];
+//        if (claimsError)
+//        {
+//            MSIDAutomationTestResult *result = [self testResultWithMSALError:claimsError];
+//            completionBlock(result);
+//            return;
+//        }
+//    }
+//    
+//    MSALSilentTokenParameters *parameters = [[MSALSilentTokenParameters alloc] initWithScopes:[scopes array] account:account];
+//    parameters.authority = silentAuthority;
+//    parameters.forceRefresh = forceRefresh;
+//    parameters.correlationId = correlationId;
+//    parameters.completionBlockQueue = dispatch_get_main_queue();
+//    [application acquireTokenSilentWithParameters:parameters completionBlock:^(MSALResult *result, NSError *error)
+//     {
+//        MSIDAutomationTestResult *testResult = [self testResultWithMSALResult:result error:error];
+//        completionBlock(testResult);
+//     }];
 }
 
 @end

@@ -130,19 +130,19 @@
     return nil;
 }
 
-- (MSIDAutomationTestResult *)testResultWithMSALError:(NSError *)error
+- (MSIDAutomationTestResult *)testResultWithMALError:(MALError *)error
 {
-    return [[MSIDAutomationErrorResult alloc] initWithAction:self.actionIdentifier
-                                                       error:error
-                                              additionalInfo:nil];
+//    return [[MSIDAutomationErrorResult alloc] initWithAction:self.actionIdentifier
+//                                                       error:nil
+//                                              additionalInfo:nil];
+    return nil;
 }
 
 - (MSIDAutomationTestResult *)testResultWithMALAuthResult:(MALAuthResult *)authResult
 {
     if (authResult.error)
     {
-        assert(false);
-        return nil;
+        return [self testResultWithMALError:authResult.error];
     }
     
     NSInteger expiresOn = [authResult.credential.expiresOn timeIntervalSince1970];
@@ -173,38 +173,38 @@
     return result;
 }
 
-- (MSIDAutomationTestResult *)testResultWithMSALResult:(MSALResult *)msalResult error:(NSError *)error
-{
-    if (error)
-    {
-        return [self testResultWithMSALError:error];
-    }
-
-    NSString *scopeString = [msalResult.scopes componentsJoinedByString:@" "];
-    NSInteger expiresOn = [msalResult.expiresOn timeIntervalSince1970];
-
-    MSIDAutomationUserInformation *userInfo = [MSIDAutomationUserInformation new];
-    userInfo.objectId = msalResult.tenantProfile.claims[@"oid"];
-    userInfo.tenantId = msalResult.tenantProfile.tenantId;
-    userInfo.username = msalResult.account.username;
-    userInfo.homeAccountId = msalResult.account.homeAccountId.identifier;
-    userInfo.localAccountId = msalResult.tenantProfile.identifier;
-    userInfo.homeObjectId = msalResult.account.homeAccountId.objectId;
-    userInfo.homeTenantId = msalResult.account.homeAccountId.tenantId;
-    userInfo.environment = msalResult.account.environment;
-
-    MSIDAutomationTestResult *result = [[MSIDAutomationSuccessResult alloc] initWithAction:self.actionIdentifier
-                                                                               accessToken:msalResult.accessToken
-                                                                              refreshToken:@""
-                                                                                   idToken:msalResult.idToken
-                                                                                 authority:msalResult.authority.url.absoluteString
-                                                                                    target:scopeString
-                                                                             expiresOnDate:expiresOn
-                                                                                    isMRRT:YES
-                                                                           userInformation:userInfo
-                                                                            additionalInfo:nil];
-
-    return result;
-}
+//- (MSIDAutomationTestResult *)testResultWithMSALResult:(MSALResult *)msalResult error:(NSError *)error
+//{
+//    if (error)
+//    {
+//        return [self testResultWithMSALError:error];
+//    }
+//
+//    NSString *scopeString = [msalResult.scopes componentsJoinedByString:@" "];
+//    NSInteger expiresOn = [msalResult.expiresOn timeIntervalSince1970];
+//
+//    MSIDAutomationUserInformation *userInfo = [MSIDAutomationUserInformation new];
+//    userInfo.objectId = msalResult.tenantProfile.claims[@"oid"];
+//    userInfo.tenantId = msalResult.tenantProfile.tenantId;
+//    userInfo.username = msalResult.account.username;
+//    userInfo.homeAccountId = msalResult.account.homeAccountId.identifier;
+//    userInfo.localAccountId = msalResult.tenantProfile.identifier;
+//    userInfo.homeObjectId = msalResult.account.homeAccountId.objectId;
+//    userInfo.homeTenantId = msalResult.account.homeAccountId.tenantId;
+//    userInfo.environment = msalResult.account.environment;
+//
+//    MSIDAutomationTestResult *result = [[MSIDAutomationSuccessResult alloc] initWithAction:self.actionIdentifier
+//                                                                               accessToken:msalResult.accessToken
+//                                                                              refreshToken:@""
+//                                                                                   idToken:msalResult.idToken
+//                                                                                 authority:msalResult.authority.url.absoluteString
+//                                                                                    target:scopeString
+//                                                                             expiresOnDate:expiresOn
+//                                                                                    isMRRT:YES
+//                                                                           userInformation:userInfo
+//                                                                            additionalInfo:nil];
+//
+//    return result;
+//}
 
 @end

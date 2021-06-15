@@ -53,38 +53,38 @@
                 containerController:(__unused MSIDAutoViewController *)containerController
                     completionBlock:(MSIDAutoCompletionBlock)completionBlock
 {
-    NSError *applicationError = nil;
-    MSALPublicClientApplication *application = [self applicationWithParameters:testRequest error:&applicationError];
-
-    if (!application)
-    {
-        MSIDAutomationTestResult *result = [self testResultWithMSALError:applicationError];
-        completionBlock(result);
-        return;
-    }
-
-    NSError *accountError = nil;
-    MSALAccount *account = [self accountWithParameters:testRequest application:application error:&accountError];
-
-    if (!account)
-    {
-        MSIDAutomationTestResult *result = [self testResultWithMSALError:accountError];
-        completionBlock(result);
-        return;
-    }
-
-    NSError *removeError = nil;
-    BOOL removeResult = [application removeAccount:account error:&removeError];
-
-    if (!removeResult)
-    {
-        MSIDAutomationTestResult *result = [self testResultWithMSALError:removeError];
-        completionBlock(result);
-        return;
-    }
-
-    MSIDAutomationTestResult *result = [[MSIDAutomationTestResult alloc] initWithAction:self.actionIdentifier success:YES additionalInfo:nil];
-    completionBlock(result);
+//    NSError *applicationError = nil;
+//    MSALPublicClientApplication *application = [self applicationWithParameters:testRequest error:&applicationError];
+//
+//    if (!application)
+//    {
+//        MSIDAutomationTestResult *result = [self testResultWithMSALError:applicationError];
+//        completionBlock(result);
+//        return;
+//    }
+//
+//    NSError *accountError = nil;
+//    MSALAccount *account = [self accountWithParameters:testRequest application:application error:&accountError];
+//
+//    if (!account)
+//    {
+//        MSIDAutomationTestResult *result = [self testResultWithMSALError:accountError];
+//        completionBlock(result);
+//        return;
+//    }
+//
+//    NSError *removeError = nil;
+//    BOOL removeResult = [application removeAccount:account error:&removeError];
+//
+//    if (!removeResult)
+//    {
+//        MSIDAutomationTestResult *result = [self testResultWithMSALError:removeError];
+//        completionBlock(result);
+//        return;
+//    }
+//
+//    MSIDAutomationTestResult *result = [[MSIDAutomationTestResult alloc] initWithAction:self.actionIdentifier success:YES additionalInfo:nil];
+//    completionBlock(result);
 }
 
 @end

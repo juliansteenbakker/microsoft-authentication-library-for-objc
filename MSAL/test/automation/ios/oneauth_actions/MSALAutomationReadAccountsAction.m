@@ -57,44 +57,44 @@
                 containerController:(__unused MSIDAutoViewController *)containerController
                     completionBlock:(MSIDAutoCompletionBlock)completionBlock
 {
-    NSError *applicationError = nil;
-    MSALPublicClientApplication *application = [self applicationWithParameters:testRequest error:&applicationError];
-
-    if (!application)
-    {
-        MSIDAutomationTestResult *result = [self testResultWithMSALError:applicationError];
-        completionBlock(result);
-        return;
-    }
-
-    NSError *error = nil;
-    NSArray *accounts = [application allAccounts:nil];
-
-    if (error)
-    {
-        MSIDAutomationTestResult *result = [self testResultWithMSALError:error];
-        completionBlock(result);
-        return;
-    }
-
-    NSMutableArray *items = [NSMutableArray array];
-
-    for (MSALAccount *account in accounts)
-    {
-        MSIDAutomationUserInformation *userInfo = [MSIDAutomationUserInformation new];
-        userInfo.username = account.username;
-        userInfo.homeAccountId = account.homeAccountId.identifier;
-        userInfo.localAccountId = account.tenantProfiles[0].identifier;
-        userInfo.homeObjectId = account.homeAccountId.objectId;
-        userInfo.homeTenantId = account.homeAccountId.tenantId;
-        userInfo.environment = account.environment;
-        userInfo.objectId = account.tenantProfiles[0].claims[@"oid"];
-        userInfo.tenantId = account.tenantProfiles[0].tenantId;
-        [items addObject:userInfo];
-    }
-
-    MSIDAutomationAccountsResult *result = [[MSIDAutomationAccountsResult alloc] initWithAction:self.actionIdentifier accounts:items additionalInfo:nil];
-    completionBlock(result);
+//    NSError *applicationError = nil;
+//    MSALPublicClientApplication *application = [self applicationWithParameters:testRequest error:&applicationError];
+//
+//    if (!application)
+//    {
+//        MSIDAutomationTestResult *result = [self testResultWithMSALError:applicationError];
+//        completionBlock(result);
+//        return;
+//    }
+//
+//    NSError *error = nil;
+//    NSArray *accounts = [application allAccounts:nil];
+//
+//    if (error)
+//    {
+//        MSIDAutomationTestResult *result = [self testResultWithMSALError:error];
+//        completionBlock(result);
+//        return;
+//    }
+//
+//    NSMutableArray *items = [NSMutableArray array];
+//
+//    for (MSALAccount *account in accounts)
+//    {
+//        MSIDAutomationUserInformation *userInfo = [MSIDAutomationUserInformation new];
+//        userInfo.username = account.username;
+//        userInfo.homeAccountId = account.homeAccountId.identifier;
+//        userInfo.localAccountId = account.tenantProfiles[0].identifier;
+//        userInfo.homeObjectId = account.homeAccountId.objectId;
+//        userInfo.homeTenantId = account.homeAccountId.tenantId;
+//        userInfo.environment = account.environment;
+//        userInfo.objectId = account.tenantProfiles[0].claims[@"oid"];
+//        userInfo.tenantId = account.tenantProfiles[0].tenantId;
+//        [items addObject:userInfo];
+//    }
+//
+//    MSIDAutomationAccountsResult *result = [[MSIDAutomationAccountsResult alloc] initWithAction:self.actionIdentifier accounts:items additionalInfo:nil];
+//    completionBlock(result);
 }
 
 @end
