@@ -29,17 +29,17 @@
 
 + (BOOL)suportsScopes
 {
-    return YES;
+    return NO;
 }
 
 + (BOOL)supportsRTInHeders
 {
-    return NO;
+    return YES;
 }
 
 + (BOOL)supportsSystemBrowser
 {
-    return YES;
+    return NO;
 }
 
 @end

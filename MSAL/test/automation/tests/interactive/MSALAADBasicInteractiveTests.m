@@ -606,10 +606,7 @@
     [self acquireToken:config];
     [self assertAuthUIAppearsUsingEmbeddedWebView:request.usesEmbeddedWebView];
     
-    if (!MSALTestsConfig.supportsRTInHeders)
-    {
-        [self aadEnterPassword];
-    }
+    [self aadEnterPassword];
     
     XCUIElement *registerButton = self.testApp.buttons[@"Get the app"];
     [self waitForElement:registerButton];
