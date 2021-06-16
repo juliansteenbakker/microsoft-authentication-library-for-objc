@@ -51,12 +51,15 @@ NS_ASSUME_NONNULL_BEGIN
                                                      error:(NSError **)error;
 
 - (MSIDAutomationTestResult *)testResultWithMALError:(MALError *)error;
-//- (MSIDAutomationTestResult *)testResultWithMSALResult:(MSALResult *)msalResult error:(NSError *)error;
 - (MSIDAutomationTestResult *)testResultWithMALAuthResult:(MALAuthResult *)authResult;
 
 - (MSALAccount *)accountWithParameters:(MSIDAutomationTestRequest *)parameters
                            application:(MSALPublicClientApplication *)application
                                  error:(NSError **)error;
+
+//
+- (MSIDAutomationTestResult *)testResultWithMSALError:(NSError *)error;
+- (MSIDAutomationTestResult *)testResultWithMSALResult:(MSALResult *)msalResult error:(NSError *)error;
 
 @end
 

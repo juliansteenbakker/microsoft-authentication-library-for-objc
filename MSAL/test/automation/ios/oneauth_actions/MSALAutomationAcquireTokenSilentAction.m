@@ -37,6 +37,8 @@
 #import "MSALError.h"
 #import "MSALClaimsRequest.h"
 
+#import <OneAuth/OneAuth.h>
+
 @implementation MSALAutomationAcquireTokenSilentAction
 
 + (void)load
@@ -58,6 +60,84 @@
                 containerController:(__unused MSIDAutoViewController *)containerController
                     completionBlock:(MSIDAutoCompletionBlock)completionBlock
 {
+    
+    // TODO:
+    NSString *appVersion = @"1.27.1";
+    MALAadConfiguration *aadConfiguration;
+    MALMsaConfiguration *msaConfiguration;
+    MALOnPremisesConfiguration *onPremConfiguration;
+    MALTelemetryConfiguration *telemetryConfig;
+    
+
+    NSUUID *clientId = [[NSUUID alloc] initWithUUIDString:testRequest.clientId];
+
+    aadConfiguration = [[MALAadConfiguration alloc] initWithClientId:clientId
+                                                         redirectUri:testRequest.redirectUri
+                                               defaultSignInResource:testRequest.requestResource
+                                                        preferBroker:NO
+                                                        capabilities:nil];
+
+    MALAuthenticatorConfiguration *config = [[MALAuthenticatorConfiguration alloc]
+        initWithAppConfiguration:[[MALAppConfiguration alloc]
+                                     initWithApplicationId:@"com.microsoft.OneAuthTestApp"
+                                                   appName:@"OneAuthTestApp"
+                                                appVersion:appVersion
+                                              languageCode:[[NSLocale currentLocale] localeIdentifier]]
+                aadConfiguration:aadConfiguration
+                msaConfiguration:msaConfiguration
+         onPremisesConfiguration:onPremConfiguration
+          telemetryConfiguration:telemetryConfig];
+
+    if ([MALOneAuth startup:config])
+    {
+        [MALOneAuth setFlights:nil];
+    }
+    
+    __auto_type authenticator = [MALOneAuth getAuthenticator];
+
+    NSUUID *correlationId = [NSUUID new];
+
+    MALAccount *account;
+    if (testRequest.homeAccountIdentifier)
+    {
+
+        NSArray *ids = [testRequest.homeAccountIdentifier componentsSeparatedByString:@"."];
+        assert(ids.count == 2);
+
+        NSString *accountId = ids[0];
+//        NSString *tenantId = ids[1];
+
+        account = [authenticator readAccountForId:accountId];
+        
+    }
+    
+    if (!account)
+    {
+        // TODO:
+        assert(false);
+    }
+    
+    MALAuthParameters *params = [[MALAuthParameters alloc] initWithAuthScheme:MALAuthSchemeBearer
+                                                                    authority:testRequest.configurationAuthority
+                                                                       target:testRequest.requestResource
+                                                                        realm:@""//tenantId
+                                                           accessTokenToRenew:@""
+                                                                       claims:testRequest.claims ?: @""
+                                                                 capabilities:nil
+                                                         additionalParameters:nil
+                                                                popParameters:nil];
+    
+    [authenticator acquireCredentialSilentlyForAccount:account
+                                            parameters:params
+                                         correlationId:correlationId
+                                            completion:^(MALAuthResult *authResult)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            MSIDAutomationTestResult *testResult = [self testResultWithMALAuthResult:authResult];
+            completionBlock(testResult);
+        });
+    }];
+    
 //    NSError *applicationError = nil;
 //    MSALPublicClientApplication *application = [self applicationWithParameters:testRequest error:nil];
 //

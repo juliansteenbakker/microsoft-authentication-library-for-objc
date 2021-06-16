@@ -162,8 +162,10 @@
 
         [authenticator acquireCredentialInteractivelyWithUxContextHandle:uxContextHandle account:account parameters:params correlationId:correlationId completion:^(MALAuthResult * _Nonnull authResult)
         {
-            MSIDAutomationTestResult *testResult = [self testResultWithMALAuthResult:authResult];
-            completionBlock(testResult);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                MSIDAutomationTestResult *testResult = [self testResultWithMALAuthResult:authResult];
+                completionBlock(testResult);
+            });
         }];
     }
     else
@@ -181,8 +183,10 @@
         
         [authenticator signInInteractivelyWithUxContextHandle:uxContextHandle accountHint:testRequest.loginHint authParameters:params behaviorParameters:nil correlationId:correlationId completion:^(MALAuthResult *_Nonnull authResult)
             {
-            MSIDAutomationTestResult *testResult = [self testResultWithMALAuthResult:authResult];
-            completionBlock(testResult);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                MSIDAutomationTestResult *testResult = [self testResultWithMALAuthResult:authResult];
+                completionBlock(testResult);
+            });
 
         }];
     }

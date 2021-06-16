@@ -526,9 +526,14 @@
     request.promptBehavior = @"force";
     request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:self.primaryAccount.targetTenantId];
     request.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"aad_graph_static"];
+    request.requestResource = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"aad_graph"];
     if (MSALTestsConfig.suportsScopes)
     {
         request.expectedResultScopes = request.requestScopes;
+    }
+    else
+    {
+        request.expectedResultScopes = request.requestResource;
     }
     request.testAccount = self.primaryAccount;
     request.loginHint = self.primaryAccount.upn;
