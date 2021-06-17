@@ -33,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class, readonly) BOOL supportsRTInHeders;
 @property (class, readonly) BOOL supportsSystemBrowser;
 @property (class, readonly) NSInteger cancelErrorCode;
+@property (class, readonly) BOOL supportsTenantSpecificResultAuthority;
 
 @end
 

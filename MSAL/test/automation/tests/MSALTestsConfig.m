@@ -47,5 +47,9 @@
     return 7; //MALStatusUserCanceled
 }
 
++ (BOOL)supportsTenantSpecificResultAuthority
+{
+    return NO;
+}
 
 @end

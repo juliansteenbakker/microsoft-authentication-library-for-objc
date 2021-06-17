@@ -525,6 +525,11 @@
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.suportsScopes];
     request.promptBehavior = @"force";
     request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:self.primaryAccount.targetTenantId];
+    if (!MSALTestsConfig.supportsTenantSpecificResultAuthority)
+    {
+        request.expectedResultAuthority = request.configurationAuthority;
+    }
+    
     request.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"aad_graph_static"];
     request.requestResource = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"aad_graph"];
     if (MSALTestsConfig.suportsScopes)
