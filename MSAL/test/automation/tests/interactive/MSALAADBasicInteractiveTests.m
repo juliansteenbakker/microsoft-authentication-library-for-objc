@@ -498,8 +498,22 @@
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.suportsScopes];
     request.promptBehavior = @"force";
     request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:self.primaryAccount.targetTenantId];
+    if (!MSALTestsConfig.supportsTenantSpecificResultAuthority)
+    {
+        request.expectedResultAuthority = request.configurationAuthority;
+    }
+    
     request.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"ms_graph"];
-    request.expectedResultScopes = [NSString msidCombinedScopes:request.requestScopes withScopes:self.class.confProvider.oidcScopes];
+    request.requestResource = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"ms_graph"];
+    if (MSALTestsConfig.suportsScopes)
+    {
+        request.expectedResultScopes = [NSString msidCombinedScopes:request.requestScopes withScopes:self.class.confProvider.oidcScopes];
+    }
+    else
+    {
+        request.expectedResultScopes = request.requestResource;
+    }
+    
     request.testAccount = self.primaryAccount;
     request.loginHint = self.primaryAccount.upn;
     request.usePassedWebView = YES;
@@ -507,10 +521,12 @@
     // 1. Sign in first time to ensure account will be there
     [self runSharedAADLoginWithTestRequest:request];
 
+    if (!MSALTestsConfig.supportsSelectAccountPrompt) return;
+    
     request.promptBehavior = @"select_account";
     request.loginHint = nil;
     NSDictionary *config = [self configWithTestRequest:request];
-
+    
     // 2. Now call acquire token with select account
     [self acquireToken:config];
 

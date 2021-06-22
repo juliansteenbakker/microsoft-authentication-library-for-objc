@@ -34,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class, readonly) BOOL supportsSystemBrowser;
 @property (class, readonly) NSInteger cancelErrorCode;
 @property (class, readonly) BOOL supportsTenantSpecificResultAuthority;
+@property (class, readonly) BOOL supportsSelectAccountPrompt;
 
 @end
 

@@ -52,4 +52,9 @@
     return NO;
 }
 
++ (BOOL)supportsSelectAccountPrompt
+{
+    return NO;
+}
+
 @end
