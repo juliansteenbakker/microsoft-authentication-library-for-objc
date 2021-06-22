@@ -137,6 +137,10 @@ static MSIDTestConfigurationProvider *s_confProvider;
 {
     MSIDAutomationSuccessResult *result = [self automationSuccessResult];
 
+    if ([result.accessToken length] <= 0) {
+        __unused int i = 0;
+    }
+    
     XCTAssertTrue([result.accessToken length] > 0);
     XCTAssertTrue(result.success);
 }
@@ -379,7 +383,15 @@ static MSIDTestConfigurationProvider *s_confProvider;
 
 - (void)closeResultView
 {
-    [self.testApp.buttons[@"Done"] msidTap];
+    // TODO:
+    NSString *simulatorSharedDir = [NSProcessInfo processInfo].environment[@"SIMULATOR_SHARED_RESOURCES_DIRECTORY"];
+    NSURL *simulatorHomeDirUrl = [[NSURL alloc] initFileURLWithPath:simulatorSharedDir];
+    NSURL *cachesDirUrl = [simulatorHomeDirUrl URLByAppendingPathComponent:@"Library/Caches"];
+    NSURL *fileUrl = [cachesDirUrl URLByAppendingPathComponent:@"ui_atomation_result_pipeline.txt"];
+    
+    // Delete file.
+    BOOL fileRemoved = [NSFileManager.defaultManager removeItemAtPath:fileUrl.path error:nil];
+    XCTAssertTrue(fileRemoved);
 }
 
 - (void)invalidateRefreshToken:(NSDictionary *)config
@@ -405,15 +417,11 @@ static MSIDTestConfigurationProvider *s_confProvider;
 - (void)clearKeychain
 {
     [self.testApp.buttons[MSID_AUTO_CLEAR_CACHE_ACTION_IDENTIFIER] msidTap];
-    [self waitForElement:self.testApp.buttons[@"Done"]];
-    [self.testApp.buttons[@"Done"] msidTap];
 }
 
 - (void)clearCookies
 {
     [self.testApp.buttons[MSID_AUTO_CLEAR_COOKIES_ACTION_IDENTIFIER] msidTap];
-    [self waitForElement:self.testApp.buttons[@"Done"]];
-    [self.testApp.buttons[@"Done"] msidTap];
 }
 
 - (void)openURL:(NSDictionary *)config
@@ -443,14 +451,11 @@ static MSIDTestConfigurationProvider *s_confProvider;
 
     NSString *jsonString = [config toJsonString];
     
-    BOOL savedToFile = [jsonString writeToFile:fileUrl.path atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    if (savedToFile) return;
+    [jsonString writeToFile:fileUrl.path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    
+    sleep(1);
     
     [self.testApp.buttons[action] msidTap];
-    [self.testApp.textViews[@"requestInfo"] msidTap];
-    [self.testApp.textViews[@"requestInfo"] msidPasteText:jsonString application:self.testApp];
-    sleep(1);
-    [self.testApp.buttons[@"Go"] msidTap];
 }
 
 - (MSIDAutomationErrorResult *)automationErrorResult
@@ -479,12 +484,35 @@ static MSIDTestConfigurationProvider *s_confProvider;
 
 - (NSDictionary *)automationResultDictionary
 {
-    XCUIElement *resultTextView = self.testApp.textViews[@"resultInfo"];
-    [self waitForElement:resultTextView];
+    NSString *simulatorSharedDir = [NSProcessInfo processInfo].environment[@"SIMULATOR_SHARED_RESOURCES_DIRECTORY"];
+    NSURL *simulatorHomeDirUrl = [[NSURL alloc] initFileURLWithPath:simulatorSharedDir];
+    NSURL *cachesDirUrl = [simulatorHomeDirUrl URLByAppendingPathComponent:@"Library/Caches"];
+    NSURL *fileUrl = [cachesDirUrl URLByAppendingPathComponent:@"ui_atomation_result_pipeline.txt"];
+    
+    int timeout = 10;
+    __auto_type resultPipelineExpectation = [[XCTestExpectation alloc] initWithDescription:@"Wait for result pipeline."];
+    
+    // Wait till file appears.
+    int i = 0;
+    while (i < timeout)
+    {
+        if ([NSFileManager.defaultManager fileExistsAtPath:fileUrl.path])
+        {
+            [resultPipelineExpectation fulfill];
+            break;
+        }
+        
+        sleep(1);
+        i++;
+    }
+    
+    [self waitForExpectations:@[resultPipelineExpectation] timeout:timeout];
 
-    NSError *error = nil;
-    NSData *data = [resultTextView.value dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    // Read json from file.
+    NSString *jsonString = [NSString stringWithContentsOfFile:fileUrl.path encoding:NSUTF8StringEncoding error:nil];
+
+    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     return result;
 }
 

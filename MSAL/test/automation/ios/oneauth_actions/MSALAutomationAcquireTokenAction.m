@@ -149,6 +149,8 @@
 
         account = [authenticator readAccountForId:accountId];
         
+        assert(account);
+        
         MALAuthParameters *params = [[MALAuthParameters alloc] initWithAuthScheme:MALAuthSchemeBearer
                                                                         authority:testRequest.configurationAuthority
                                                                            target:testRequest.requestResource
