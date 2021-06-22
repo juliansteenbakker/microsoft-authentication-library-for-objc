@@ -469,11 +469,34 @@
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.suportsScopes];
     request.promptBehavior = @"force";
     request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:@"organizations"];
+    
     NSString *scope = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"aad_graph_guid"];
     request.requestScopes = [scope stringByAppendingString:@"/.default"];
-    request.expectedResultScopes = request.requestScopes;
-    request.expectedResultAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:self.primaryAccount.targetTenantId];
+    request.requestResource = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"aad_graph_guid"];
+    if (MSALTestsConfig.suportsScopes)
+    {
+        request.expectedResultScopes = request.requestScopes;
+    }
+    else
+    {
+        request.expectedResultScopes = request.requestResource;
+    }
+    
+    if (MSALTestsConfig.supportsTenantSpecificResultAuthority)
+    {
+        request.expectedResultAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:self.primaryAccount.targetTenantId];
+    }
+    else
+    {
+        request.expectedResultAuthority = request.configurationAuthority;
+    }
+    
     request.loginHint = self.primaryAccount.upn;
+    
+    if (!MSALTestsConfig.supportsSystemBrowser)
+    {
+        request.usePassedWebView = YES;
+    }
 
     [self runSharedAADLoginWithTestRequest:request];
 }
@@ -485,8 +508,21 @@
     request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:@"common"];
     NSString *scope = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"ms_graph_guid"];
     request.requestScopes = [scope stringByAppendingString:@"/.default"];
-    request.expectedResultScopes = request.requestScopes;
+    request.requestResource = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"ms_graph_guid"];
+    if (MSALTestsConfig.suportsScopes)
+    {
+        request.expectedResultScopes = request.requestScopes;
+    }
+    else
+    {
+        request.expectedResultScopes = request.requestResource;
+    }
+    
     request.loginHint = self.primaryAccount.upn;
+    if (!MSALTestsConfig.supportsSystemBrowser)
+    {
+        request.usePassedWebView = YES;
+    }
 
     [self runSharedAADLoginWithTestRequest:request];
 }
@@ -521,6 +557,7 @@
     // 1. Sign in first time to ensure account will be there
     [self runSharedAADLoginWithTestRequest:request];
 
+    // TODO: skip this test?
     if (!MSALTestsConfig.supportsSelectAccountPrompt) return;
     
     request.promptBehavior = @"select_account";
