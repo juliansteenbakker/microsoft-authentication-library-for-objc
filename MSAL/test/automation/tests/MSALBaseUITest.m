@@ -436,7 +436,16 @@ static MSIDTestConfigurationProvider *s_confProvider;
 - (void)performAction:(NSString *)action
            withConfig:(NSDictionary *)config
 {
+    NSString *simulatorSharedDir = [NSProcessInfo processInfo].environment[@"SIMULATOR_SHARED_RESOURCES_DIRECTORY"];
+    NSURL *simulatorHomeDirUrl = [[NSURL alloc] initFileURLWithPath:simulatorSharedDir];
+    NSURL *cachesDirUrl = [simulatorHomeDirUrl URLByAppendingPathComponent:@"Library/Caches"];
+    NSURL *fileUrl = [cachesDirUrl URLByAppendingPathComponent:@"ui_atomation_request_pipeline.txt"];
+
     NSString *jsonString = [config toJsonString];
+    
+    BOOL savedToFile = [jsonString writeToFile:fileUrl.path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    if (savedToFile) return;
+    
     [self.testApp.buttons[action] msidTap];
     [self.testApp.textViews[@"requestInfo"] msidTap];
     [self.testApp.textViews[@"requestInfo"] msidPasteText:jsonString application:self.testApp];
