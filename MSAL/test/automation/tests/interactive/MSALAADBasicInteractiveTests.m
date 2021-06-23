@@ -468,28 +468,15 @@
 {
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.suportsScopes];
     request.promptBehavior = @"force";
-    request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:@"organizations"];
-    
-    NSString *scope = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"aad_graph_guid"];
-    request.requestScopes = [scope stringByAppendingString:@"/.default"];
-    request.requestResource = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"aad_graph_guid"];
-    if (MSALTestsConfig.suportsScopes)
-    {
-        request.expectedResultScopes = request.requestScopes;
-    }
-    else
-    {
-        request.expectedResultScopes = request.requestResource;
-    }
-    
-    if (MSALTestsConfig.supportsTenantSpecificResultAuthority)
-    {
-        request.expectedResultAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:self.primaryAccount.targetTenantId];
-    }
-    else
-    {
-        request.expectedResultAuthority = request.configurationAuthority;
-    }
+    [self.class.confProvider configureAuthorityInRequest:request
+                                          forEnvironment:self.testEnvironment
+                                                tenantId:@"organizations"
+                                         accountTenantId:self.primaryAccount.targetTenantId
+                   supportsTenantSpecificResultAuthority:MSALTestsConfig.supportsTenantSpecificResultAuthority];
+    [self.class.confProvider configureResourceInRequest:request
+                                         forEnvironment:self.testEnvironment
+                                                   type:@"aad_graph_guid"
+                                          suportsScopes:MSALTestsConfig.suportsScopes];
     
     request.loginHint = self.primaryAccount.upn;
     
@@ -506,23 +493,13 @@
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.suportsScopes];
     request.promptBehavior = @"force";
     request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:@"common"];
-    NSString *scope = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"ms_graph_guid"];
-    request.requestScopes = [scope stringByAppendingString:@"/.default"];
-    request.requestResource = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"ms_graph_guid"];
-    if (MSALTestsConfig.suportsScopes)
-    {
-        request.expectedResultScopes = request.requestScopes;
-    }
-    else
-    {
-        request.expectedResultScopes = request.requestResource;
-    }
+    [self.class.confProvider configureResourceInRequest:request
+                                         forEnvironment:self.testEnvironment
+                                                   type:@"ms_graph_guid"
+                                          suportsScopes:MSALTestsConfig.suportsScopes];
     
     request.loginHint = self.primaryAccount.upn;
-    if (!MSALTestsConfig.supportsSystemBrowser)
-    {
-        request.usePassedWebView = YES;
-    }
+    if (!MSALTestsConfig.supportsSystemBrowser) request.usePassedWebView = YES;
 
     [self runSharedAADLoginWithTestRequest:request];
 }
@@ -533,22 +510,16 @@
 {
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.suportsScopes];
     request.promptBehavior = @"force";
-    request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:self.primaryAccount.targetTenantId];
-    if (!MSALTestsConfig.supportsTenantSpecificResultAuthority)
-    {
-        request.expectedResultAuthority = request.configurationAuthority;
-    }
-    
-    request.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"ms_graph"];
-    request.requestResource = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"ms_graph"];
-    if (MSALTestsConfig.suportsScopes)
-    {
-        request.expectedResultScopes = [NSString msidCombinedScopes:request.requestScopes withScopes:self.class.confProvider.oidcScopes];
-    }
-    else
-    {
-        request.expectedResultScopes = request.requestResource;
-    }
+    [self.class.confProvider configureAuthorityInRequest:request
+                                          forEnvironment:self.testEnvironment
+                                                tenantId:self.primaryAccount.targetTenantId
+                                         accountTenantId:self.primaryAccount.targetTenantId
+                   supportsTenantSpecificResultAuthority:MSALTestsConfig.supportsTenantSpecificResultAuthority];
+    [self.class.confProvider configureScopesInRequest:request
+                                       forEnvironment:self.testEnvironment
+                                           scopesType:@"ms_graph"
+                                         resourceType:@"ms_graph"
+                                        suportsScopes:MSALTestsConfig.suportsScopes];
     
     request.testAccount = self.primaryAccount;
     request.loginHint = self.primaryAccount.upn;
@@ -577,22 +548,16 @@
 {
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.suportsScopes];
     request.promptBehavior = @"force";
-    request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:self.primaryAccount.targetTenantId];
-    if (!MSALTestsConfig.supportsTenantSpecificResultAuthority)
-    {
-        request.expectedResultAuthority = request.configurationAuthority;
-    }
-    
-    request.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"aad_graph_static"];
-    request.requestResource = [self.class.confProvider resourceForEnvironment:self.testEnvironment type:@"aad_graph"];
-    if (MSALTestsConfig.suportsScopes)
-    {
-        request.expectedResultScopes = request.requestScopes;
-    }
-    else
-    {
-        request.expectedResultScopes = request.requestResource;
-    }
+    [self.class.confProvider configureAuthorityInRequest:request
+                                          forEnvironment:self.testEnvironment
+                                                tenantId:self.primaryAccount.targetTenantId
+                                         accountTenantId:self.primaryAccount.targetTenantId
+                   supportsTenantSpecificResultAuthority:MSALTestsConfig.supportsTenantSpecificResultAuthority];
+    [self.class.confProvider configureScopesInRequest:request
+                                       forEnvironment:self.testEnvironment
+                                           scopesType:@"aad_graph_static"
+                                         resourceType:@"aad_graph"
+                                        suportsScopes:MSALTestsConfig.suportsScopes];
     request.testAccount = self.primaryAccount;
     request.loginHint = self.primaryAccount.upn;
     request.usePassedWebView = YES;
