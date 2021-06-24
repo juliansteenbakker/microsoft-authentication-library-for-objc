@@ -27,7 +27,7 @@
 
 @implementation MSALTestsConfig
 
-+ (BOOL)suportsScopes
++ (BOOL)supportsScopes
 {
     return NO;
 }
@@ -42,11 +42,6 @@
     return NO;
 }
 
-+ (NSInteger)cancelErrorCode
-{
-    return 7; //MALStatusUserCanceled
-}
-
 + (BOOL)supportsTenantSpecificResultAuthority
 {
     return NO;
@@ -55,6 +50,23 @@
 + (BOOL)supportsSelectAccountPrompt
 {
     return NO;
+}
+
++ (BOOL)supportsConsentPrompt
+{
+    return NO;
+}
+
+#pragma mark - Error codes
+
++ (NSInteger)userCanceledErrorCode
+{
+    return 7; //MALStatusUserCanceled
+}
+
++ (NSInteger)applicationCanceledErrorCode
+{
+    return 8; //MALStatusApplicationCanceled
 }
 
 @end

@@ -29,12 +29,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MSALTestsConfig : NSObject
 
-@property (class, readonly) BOOL suportsScopes;
+@property (class, readonly) BOOL supportsScopes;
 @property (class, readonly) BOOL supportsRTInHeders;
 @property (class, readonly) BOOL supportsSystemBrowser;
-@property (class, readonly) NSInteger cancelErrorCode;
 @property (class, readonly) BOOL supportsTenantSpecificResultAuthority;
 @property (class, readonly) BOOL supportsSelectAccountPrompt;
+@property (class, readonly) BOOL supportsConsentPrompt;
+@property (class, readonly) NSInteger userCanceledErrorCode;
+@property (class, readonly) NSInteger applicationCanceledErrorCode;
 
 @end
 
