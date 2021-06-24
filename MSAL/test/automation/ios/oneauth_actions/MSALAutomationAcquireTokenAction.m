@@ -156,7 +156,7 @@
                                                                            target:testRequest.requestResource
                                                                             realm:tenantId
                                                                accessTokenToRenew:@""
-                                                                           claims:testRequest.claims
+                                                                           claims:testRequest.claims ?: @""
                                                                      capabilities:nil
                                                              additionalParameters:nil
                                                                     popParameters:nil

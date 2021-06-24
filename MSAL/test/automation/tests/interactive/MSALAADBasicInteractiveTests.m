@@ -436,11 +436,21 @@
 {
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.suportsScopes];
     request.promptBehavior = @"force";
-    request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:@"organizations"];
-    request.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"aad_graph_static"];
-    request.expectedResultScopes = request.requestScopes;
+    [self.class.confProvider configureAuthorityInRequest:request
+                                          forEnvironment:self.testEnvironment
+                                                tenantId:@"organizations"
+                                         accountTenantId:self.primaryAccount.targetTenantId
+                   supportsTenantSpecificResultAuthority:MSALTestsConfig.supportsTenantSpecificResultAuthority];
+    [self.class.confProvider configureScopesInRequest:request
+                                       forEnvironment:self.testEnvironment
+                                           scopesType:@"aad_graph_static"
+                                         resourceType:@"aad_graph"
+                                        suportsScopes:MSALTestsConfig.suportsScopes];
+    
     request.testAccount = self.primaryAccount;
     request.loginHint = self.primaryAccount.upn;
+    
+    if (!MSALTestsConfig.supportsSystemBrowser) request.usePassedWebView = YES;
 
     [self runSharedAADLoginWithTestRequest:request];
 }
@@ -449,11 +459,18 @@
 {
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.suportsScopes];
     request.promptBehavior = @"force";
-    request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:@"organizations"];
-    request.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"aad_graph_static"];
-    request.expectedResultScopes = request.requestScopes;
-    request.expectedResultAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:self.primaryAccount.targetTenantId];
-    request.cacheAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:self.primaryAccount.targetTenantId];
+    [self.class.confProvider configureScopesInRequest:request
+                                       forEnvironment:self.testEnvironment
+                                           scopesType:@"aad_graph_static"
+                                         resourceType:@"aad_graph"
+                                        suportsScopes:MSALTestsConfig.suportsScopes];
+    [self.class.confProvider configureAuthorityInRequest:request
+                                          forEnvironment:self.testEnvironment
+                                                tenantId:@"organizations"
+                                         accountTenantId:self.primaryAccount.targetTenantId
+                   supportsTenantSpecificResultAuthority:MSALTestsConfig.supportsTenantSpecificResultAuthority];
+    
+    if (!MSALTestsConfig.supportsSystemBrowser) request.usePassedWebView = YES;
 
     // 1. Sign in interactively first
     [self runSharedAADLoginWithTestRequest:request];
@@ -480,10 +497,7 @@
     
     request.loginHint = self.primaryAccount.upn;
     
-    if (!MSALTestsConfig.supportsSystemBrowser)
-    {
-        request.usePassedWebView = YES;
-    }
+    if (!MSALTestsConfig.supportsSystemBrowser) request.usePassedWebView = YES;
 
     [self runSharedAADLoginWithTestRequest:request];
 }
