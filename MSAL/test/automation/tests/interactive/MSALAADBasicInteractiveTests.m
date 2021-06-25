@@ -219,11 +219,20 @@
 {
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.supportsScopes];
     request.promptBehavior = @"force";
-    request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:@"organizations"];
-    request.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"ms_graph_static"];
-    request.expectedResultScopes = [NSString msidCombinedScopes:request.requestScopes withScopes:self.class.confProvider.oidcScopes];
+    [self.class.confProvider configureAuthorityInRequest:request
+                                          forEnvironment:self.testEnvironment
+                                                tenantId:@"organizations"
+                                         accountTenantId:self.primaryAccount.targetTenantId
+                   supportsTenantSpecificResultAuthority:MSALTestsConfig.supportsTenantSpecificResultAuthority];
+    [self.class.confProvider configureScopesInRequest:request
+                                       forEnvironment:self.testEnvironment
+                                           scopesType:@"ms_graph_static"
+                                         resourceType:@"ms_graph"
+                                        suportsScopes:MSALTestsConfig.supportsScopes];
+    
     request.testAccount = self.primaryAccount;
     request.loginHint = self.primaryAccount.upn;
+    if (!MSALTestsConfig.supportsSystemBrowser) request.usePassedWebView = YES;
 
     // 1. Run Interactive
     NSString *homeAccountId = [self runSharedAADLoginWithTestRequest:request];
@@ -237,11 +246,19 @@
 {
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.supportsScopes];
     request.promptBehavior = @"force";
-    request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:self.testEnvironment tenantId:self.primaryAccount.targetTenantId];
-    request.requestScopes = [self.class.confProvider scopesForEnvironment:self.testEnvironment type:@"ms_graph"];
-    request.expectedResultScopes = [NSString msidCombinedScopes:request.requestScopes withScopes:self.class.confProvider.oidcScopes];
+    [self.class.confProvider configureAuthorityInRequest:request
+                                          forEnvironment:self.testEnvironment
+                                                tenantId:self.primaryAccount.targetTenantId
+                                         accountTenantId:self.primaryAccount.targetTenantId
+                   supportsTenantSpecificResultAuthority:MSALTestsConfig.supportsTenantSpecificResultAuthority];
+    [self.class.confProvider configureScopesInRequest:request
+                                       forEnvironment:self.testEnvironment
+                                           scopesType:@"ms_graph"
+                                         resourceType:@"ms_graph"
+                                        suportsScopes:MSALTestsConfig.supportsScopes];
     request.testAccount = self.primaryAccount;
     request.loginHint = self.primaryAccount.upn;
+    if (!MSALTestsConfig.supportsSystemBrowser) request.usePassedWebView = YES;
 
     // 1. Run Interactive
     NSString *homeAccountId = [self runSharedAADLoginWithTestRequest:request];

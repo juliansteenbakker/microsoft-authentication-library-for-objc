@@ -66,30 +66,34 @@
     MSALAuthority *msalAuthority = [MSALAuthority authorityWithURL:authorityUrl error:nil];
 
     MSIDAccountIdentifier *account = [[MSIDAccountIdentifier alloc] initWithDisplayableId:nil homeAccountId:testRequest.homeAccountIdentifier];
+    
+    [msalAuthority.msidAuthority resolveAndValidate:NO userPrincipalName:nil context:nil completionBlock:^(__unused NSURL *openIdConfigurationEndpoint,__unused  BOOL validated, __unused  NSError * error) {
+        MSIDConfiguration *configuration = [[MSIDConfiguration alloc] initWithAuthority:msalAuthority.msidAuthority
+                                                                            redirectUri:nil
+                                                                               clientId:testRequest.clientId
+                                                                                 target:testRequest.requestScopes];
 
-    MSIDConfiguration *configuration = [[MSIDConfiguration alloc] initWithAuthority:msalAuthority.msidAuthority
-                                                                        redirectUri:nil
-                                                                           clientId:testRequest.clientId
-                                                                             target:testRequest.requestScopes];
+        MSIDAccessToken *accessToken = [self.defaultAccessor getAccessTokenForAccount:account
+                                                                        configuration:configuration
+                                                                              context:nil
+                                                                                error:nil];
 
-    MSIDAccessToken *accessToken = [self.defaultAccessor getAccessTokenForAccount:account
-                                                                    configuration:configuration
-                                                                          context:nil
-                                                                            error:nil];
+        if (!accessToken)
+        {
+            MSIDAutomationTestResult *testResult = [[MSIDAutomationTestResult alloc] initWithAction:self.actionIdentifier success:NO additionalInfo:nil];
+            completionBlock(testResult);
+            return;
+        }
 
-    if (!accessToken)
-    {
-        MSIDAutomationTestResult *testResult = [[MSIDAutomationTestResult alloc] initWithAction:self.actionIdentifier success:NO additionalInfo:nil];
+        accessToken.expiresOn = [NSDate dateWithTimeIntervalSinceNow:-1.0];
+        BOOL result = [self.accountCredentialCache saveCredential:accessToken.tokenCacheItem context:nil error:nil];
+
+        MSIDAutomationTestResult *testResult = [[MSIDAutomationTestResult alloc] initWithAction:self.actionIdentifier success:result additionalInfo:nil];
+        testResult.actionCount = 1;
         completionBlock(testResult);
-        return;
-    }
+    }];
 
-    accessToken.expiresOn = [NSDate dateWithTimeIntervalSinceNow:-1.0];
-    BOOL result = [self.accountCredentialCache saveCredential:accessToken.tokenCacheItem context:nil error:nil];
 
-    MSIDAutomationTestResult *testResult = [[MSIDAutomationTestResult alloc] initWithAction:self.actionIdentifier success:result additionalInfo:nil];
-    testResult.actionCount = 1;
-    completionBlock(testResult);
 }
 
 @end

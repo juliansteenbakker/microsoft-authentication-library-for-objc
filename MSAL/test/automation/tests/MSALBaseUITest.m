@@ -489,7 +489,7 @@ static MSIDTestConfigurationProvider *s_confProvider;
     NSURL *cachesDirUrl = [simulatorHomeDirUrl URLByAppendingPathComponent:@"Library/Caches"];
     NSURL *fileUrl = [cachesDirUrl URLByAppendingPathComponent:@"ui_atomation_result_pipeline.txt"];
     
-    int timeout = 10;
+    int timeout = 1000;
     __auto_type resultPipelineExpectation = [[XCTestExpectation alloc] initWithDescription:@"Wait for result pipeline."];
     
     // Wait till file appears.
