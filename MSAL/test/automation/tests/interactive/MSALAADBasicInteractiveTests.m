@@ -141,6 +141,7 @@
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.supportsScopes];
     request.promptBehavior = @"force";
     request.testAccount = self.primaryAccount;
+    if (!MSALTestsConfig.supportsSystemBrowser) request.usePassedWebView = YES;
 
     // 1. Run interactive
     NSString *homeAccountId = [self runSharedAADLoginWithTestRequest:request];
