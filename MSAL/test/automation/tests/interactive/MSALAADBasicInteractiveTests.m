@@ -77,6 +77,8 @@
 // Converged app tests
 - (void)testInteractiveAADLogin_withConvergedApp_andMicrosoftGraphScopes_andCommonEndpoint_andForceLogin
 {
+    XCTSkipUnless(MSALTestsConfig.supportsScopes);
+    
     MSIDAutomationTestRequest *request = [self.class.confProvider defaultAppRequest:self.testEnvironment targetTenantId:self.primaryAccount.targetTenantId scopesSupported:MSALTestsConfig.supportsScopes];
     request.promptBehavior = @"force";
     request.testAccount = self.primaryAccount;
@@ -163,8 +165,11 @@
 
     // 2. Run silent with a different authority alias
     request.homeAccountIdentifier = homeAccountId;
-    request.configurationAuthority = [self.class.confProvider defaultAuthorityForIdentifier:@"ww-alias"];
-    request.expectedResultAuthority = [self.class.confProvider defaultAuthorityForIdentifier:@"ww-alias" tenantId:self.primaryAccount.targetTenantId];
+    [self.class.confProvider configureAuthorityInRequest:request
+                                          forEnvironment:@"ww-alias"
+                                                tenantId:@"common"
+                                         accountTenantId:self.primaryAccount.targetTenantId
+                   supportsTenantSpecificResultAuthority:MSALTestsConfig.supportsTenantSpecificResultAuthority];
     [self runSharedSilentAADLoginWithTestRequest:request];
 }
 

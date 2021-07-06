@@ -58,7 +58,10 @@ static MSIDTestConfigurationProvider *s_confProvider;
     [self.testApp launch];
 
     [self clearKeychain];
+    [self closeResultView];
+    
     [self clearCookies];
+    [self closeResultView];
 }
 
 - (void)tearDown
@@ -389,8 +392,12 @@ static MSIDTestConfigurationProvider *s_confProvider;
     NSURL *cachesDirUrl = [simulatorHomeDirUrl URLByAppendingPathComponent:@"Library/Caches"];
     NSURL *fileUrl = [cachesDirUrl URLByAppendingPathComponent:@"ui_atomation_result_pipeline.txt"];
     
+    if (![NSFileManager.defaultManager fileExistsAtPath:fileUrl.path]) return;
+    
     // Delete file.
-    BOOL fileRemoved = [NSFileManager.defaultManager removeItemAtPath:fileUrl.path error:nil];
+    NSError *error;
+    BOOL fileRemoved = [NSFileManager.defaultManager removeItemAtPath:fileUrl.path error:&error];
+    XCTAssertNil(error);
     XCTAssertTrue(fileRemoved);
 }
 
